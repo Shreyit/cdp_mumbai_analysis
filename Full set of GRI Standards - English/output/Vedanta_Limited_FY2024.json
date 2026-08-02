@@ -1,0 +1,1098 @@
+{
+  "metadata": {
+    "company_name": "Vedanta Limited",
+    "report_year": "FY2024",
+    "report_type": "Sustainability Report",
+    "total_pages": 119,
+    "extraction_ts": "2026-07-21T10:10:12"
+  },
+  "gri_coverage": [
+    {
+      "sr_no": 1,
+      "gri_topic": "Climate Change",
+      "underlying_standard": "GRI 302: Energy 2016 + GRI 305: Emissions 2016",
+      "coverage_rating": "Strong",
+      "page_range": "3–116",
+      "disclosures": "302-1, 302-2, 302-3, 302-4, 305-1, 305-2, 305-3, 305-4, 305-5, 305-6, 305-7",
+      "reported": true,
+      "coverage_score_pct": 85.7,
+      "matched_keywords": [
+        "climate change",
+        "ghg",
+        "greenhouse gas",
+        "carbon",
+        "emission",
+        "net zero",
+        "scope 1",
+        "scope 2",
+        "scope 3",
+        "energy consumption",
+        "renewable energy",
+        "decarbonization"
+      ],
+      "evidence_snippets": [
+        "72 global Metals &  Mining players 1st Among 29 Global Aluminum  Companies 37.6 Climate Change Water Security B A- Vedanta ntric 2023  Recognised at the 3rd National  Transgender Awards rds es  Hindustan Zinc Ltd. “Leadership in  HR Excellence”  at the 14th CI",
+        "of Scope  anagement assessment and these calculations are done on the basis of GHG protocol (Technical Guidance for  ns). Our assets are located across India, South Africa and UAE.  and referenced ng Initiative   dards United Nations Global Compact  Principle",
+        "project aims to harness solar  energy through rooftop installations  to reduce greenhouse gas (GHG)  emissions, generate renewable  Cairn Oil & Gas has embarked on a  renewable energy project focusing on  the deployment of rooftop solar panels  at various ins"
+      ],
+      "key_metrics": [
+        "50,000 tonnes",
+        "5.66 TCO2e",
+        "66,551 tonnes",
+        "25,000 \ntonnes",
+        "34 million ",
+        "7 million ",
+        "544  \nmillion \n",
+        "2 million\n"
+      ],
+      "expected_disclosures": [
+        "302-1",
+        "302-2",
+        "302-3",
+        "302-4",
+        "302-5",
+        "305-1",
+        "305-2",
+        "305-3",
+        "305-4",
+        "305-5",
+        "305-6",
+        "305-7"
+      ]
+    },
+    {
+      "sr_no": 2,
+      "gri_topic": "Air Emissions",
+      "underlying_standard": "GRI 305: Emissions 2016",
+      "coverage_rating": "Strong",
+      "page_range": "27–117",
+      "disclosures": "305-7",
+      "reported": true,
+      "coverage_score_pct": 50.0,
+      "matched_keywords": [
+        "nox",
+        "sox",
+        "air quality",
+        "air emission",
+        "voc",
+        "significant air"
+      ],
+      "evidence_snippets": [
+        "nal  diesel-powered ones. BEVs do not  require extensive ventilation to remove  noxious fumes like the ones produced  by diesel-powered ones. Consequently,  Vedanta expects to save on ventilation  infrastructure and operational costs  too with the switch to BE",
+        "atic Hydr from our alum been aligned w Management S 17,008 PM Emissions 399,279 SOx Emissions (MT) 102,946 NOx Emissions (MT) standards but go well beyond thereby  ensuring the health and well-being of  our workers, nearby human settlements  and natural ecosys",
+        "generation, release,  efficient management at our sites and  impact on ambient air quality, are a  vital component of our sustainability  strategy. At each of our sites, we not  only meet the mandated air quality  Air Emission (metric tonnes) in FY 2024 monit"
+      ],
+      "key_metrics": [
+        "16.9 million tonnes",
+        "43.32 million \ntonnes",
+        "18.5 million tonnes"
+      ],
+      "expected_disclosures": [
+        "305-7"
+      ]
+    },
+    {
+      "sr_no": 3,
+      "gri_topic": "Materials",
+      "underlying_standard": "GRI 301: Materials 2016",
+      "coverage_rating": "Partial",
+      "page_range": "N/A",
+      "disclosures": "N/A",
+      "reported": true,
+      "coverage_score_pct": 16.7,
+      "matched_keywords": [
+        "raw materials",
+        "recycled material"
+      ],
+      "evidence_snippets": [
+        "s,  from exploration and development to  extraction and processing. We produce  raw materials for other industries and  offer customized products for various  secondary industries. Our skilled teams  use advanced technology and strict  processes to manage each",
+        "rget by 2070 Vedanta is well-positioned to capitalize on these trends driving s Recycled Materials Sil 24,69 Estimated r 61,733 tCO (Scope 3 Em Fujairah 2,359 MT Estimated reduction of  5,897.5 tCO2eq.  (Scope 3 Emissions) water positive by 2030. With operatio"
+      ],
+      "key_metrics": [],
+      "expected_disclosures": [
+        "301-1",
+        "301-2",
+        "301-3"
+      ]
+    },
+    {
+      "sr_no": 4,
+      "gri_topic": "Biodiversity",
+      "underlying_standard": "GRI 101: Biodiversity 2024 + GRI 304: Biodiversity 2016 (legacy)",
+      "coverage_rating": "Strong",
+      "page_range": "4–116",
+      "disclosures": "304-1, 304-2, 304-3, 304-4",
+      "reported": true,
+      "coverage_score_pct": 92.3,
+      "matched_keywords": [
+        "biodiversity",
+        "ecosystem",
+        "habitat",
+        "species",
+        "conservation",
+        "nature",
+        "wildlife",
+        "deforestation",
+        "land use",
+        "protected area",
+        "invasive species",
+        "tnfd"
+      ],
+      "evidence_snippets": [
+        "ture-related financial disclosures Standards/guidelines used:  Approach towards biodiversity  strategy, risk management V E D A N T A  L I M I T E D  TNFD Report 2024 Further, some of the entities/ sites are  considered for the purpose of said  financial numbe",
+        "e to a carbon-neutral  growth trajectory while meticulously  preserving natural ecosystems. For the  first time in industrial history, we must  deeply understand the interconnected,  symbiotic processes of Nature to ensure  our survival and the continuity of t",
+        "es planted FY 2024 Achievements  Material Issues addressed in this Pillar SDGs  habitats as a result of our excavation  and mining activities. Fully cognizant  of this impact and with a strong desire  to limit and reverse any long-term  negative effects, Vedan"
+      ],
+      "key_metrics": [
+        "2.5 million \n",
+        "100 million "
+      ],
+      "expected_disclosures": [
+        "304-1",
+        "304-2",
+        "304-3",
+        "304-4"
+      ]
+    },
+    {
+      "sr_no": 5,
+      "gri_topic": "Waste",
+      "underlying_standard": "GRI 306: Waste 2020",
+      "coverage_rating": "Strong",
+      "page_range": "5–117",
+      "disclosures": "306-1, 306-2",
+      "reported": true,
+      "coverage_score_pct": 66.7,
+      "matched_keywords": [
+        "waste",
+        "recycling",
+        "disposal",
+        "landfill",
+        "hazardous waste",
+        "circular economy",
+        "zero waste",
+        "fly ash"
+      ],
+      "evidence_snippets": [
+        "ntinued or outsourced.  t, Water footprint, Energy footprint and details of the Waste Management with respect to the   onsidered, based on our assessment of being immaterial to the Group’s reporting: s with respect to the Entities as considered under the Repor",
+        "thermal power to renewables leading  to reduced GHG emissions; improved  waste recycling, particularly through  recovery and recycling of metals; and  natural climate solutions for greater  carbon sequestration by way of  land reclamation and afforestation.",
+        "emissions,  anagement of hazardous and non-hazardous waste and safe storage and disposal of tailings.  ons on our surroundings is an issue that attracts public and media attention and has high  mpact. As a responsible mining leader, we have always chosen to pr"
+      ],
+      "key_metrics": [
+        "50,000 tonnes",
+        "34 million ",
+        "7 million ",
+        "13.3 million ",
+        "50 million ",
+        "50 billion ",
+        "78 \nmillion ",
+        "85 million "
+      ],
+      "expected_disclosures": [
+        "306-1",
+        "306-2",
+        "306-3",
+        "306-4",
+        "306-5"
+      ]
+    },
+    {
+      "sr_no": 6,
+      "gri_topic": "Water and Effluents",
+      "underlying_standard": "GRI 303: Water and Effluents 2018",
+      "coverage_rating": "Strong",
+      "page_range": "20–116",
+      "disclosures": "303-1, 303-3, 303-4",
+      "reported": true,
+      "coverage_score_pct": 90.0,
+      "matched_keywords": [
+        "water withdrawal",
+        "water consumption",
+        "water recycling",
+        "water stress",
+        "wastewater",
+        "water positivity",
+        "water management",
+        "water footprint",
+        "freshwater"
+      ],
+      "evidence_snippets": [
+        "condensation and reuse of co and demineralized regenerated water  reducing freshwater withdrawal by 21 Vedanta Copper business. Of this, 16,7 achieved.  Re-use of boiler blow down water for i KL annually at Cairn India. Rainwater  Harvesting  Capturing rainwat",
+        "communities Water Positivity Ratio 0.71 Water Recycling  84.7 million m³ Total Water Consumption 280 million m3 Management Approach   Vedanta’s Board level ESG Committee  has continuously prioritized water  management given the criticality of this  resource f",
+        "n FY 2024 External Stakeholders:  Local communities Water Positivity Ratio 0.71 Water Recycling  84.7 million m³ Total Water Consumption 280 million m3 Management Approach   Vedanta’s Board level ESG Committee  has continuously prioritized water  management gi"
+      ],
+      "key_metrics": [
+        "5.66 tCO2e",
+        "275 KL",
+        "90,000 KL",
+        "544.02 billion ",
+        "1.5 million \n",
+        "2.5 million \n",
+        "000  \n million ",
+        "0.6 million \n"
+      ],
+      "expected_disclosures": [
+        "303-1",
+        "303-2",
+        "303-3",
+        "303-4",
+        "303-5"
+      ]
+    },
+    {
+      "sr_no": 7,
+      "gri_topic": "Tailings",
+      "underlying_standard": "No GRI Topic Standard (GRI 14 sector-specific)",
+      "coverage_rating": "Strong",
+      "page_range": "11–112",
+      "disclosures": "N/A",
+      "reported": true,
+      "coverage_score_pct": 36.4,
+      "matched_keywords": [
+        "tailings",
+        "tailings dam",
+        "tailings management",
+        "tsf"
+      ],
+      "evidence_snippets": [
+        "fly ash that we generated  at our power plants. Further, the audit  of all our Tailings dams was completed,  with the finalization of subsequent  actions to be taken and monitoring  measures also rolled out. The safe  management of our Tailings dams is a  hig",
+        "fly ash that we generated  at our power plants. Further, the audit  of all our Tailings dams was completed,  with the finalization of subsequent  actions to be taken and monitoring  measures also rolled out. The safe  management of our Tailings dams is a  hig",
+        "ociety  edanta (financial materiality). Sustainable and Inclusive Supply Chain, Tailings Management have shifted from issues of high material impact to medium impact  & Cultural Heritage have shifted from issues of high material impact to low impact High prior"
+      ],
+      "key_metrics": [
+        "78 \nmillion ",
+        "85 million ",
+        "2 million \n",
+        "78 million ",
+        "85 million \n",
+        "466 million\n",
+        "16.9 million tonnes",
+        "43.32 million \ntonnes"
+      ],
+      "expected_disclosures": [
+        "14.6.2",
+        "14.6.3"
+      ]
+    },
+    {
+      "sr_no": 8,
+      "gri_topic": "Closure and Rehabilitation",
+      "underlying_standard": "No GRI Topic Standard (GRI 14 sector-specific)",
+      "coverage_rating": "Strong",
+      "page_range": "33–50",
+      "disclosures": "N/A",
+      "reported": true,
+      "coverage_score_pct": 54.5,
+      "matched_keywords": [
+        "mine closure",
+        "land rehabilitation",
+        "decommissioning",
+        "land reclamation",
+        "closure plan",
+        "post-closure"
+      ],
+      "evidence_snippets": [
+        "Strategy   Targets achieved of water  & energy saving ahead of  time   Lisheen mine closure with  adoption of consultative  worldclass rehabilitation  process  Sustainability Committee of  the Board established   Pledged to participate  in and lead the United",
+        "ght from the stage of planning for land acquisition through to post- e focus on land rehabilitation, water source protection, and biodiversity restoration. Our closure  e environmental impacts and support socio-economic transitioning for local populations. As",
+        "anies and operations  under Vedanta Ltd. adhere to the stipulations  concerning decommissioning and site closure  procedures. They ensure that the mechanisms  employed for decommissioning and site closure  Vedanta has successfully  completed the closure of  a"
+      ],
+      "key_metrics": [
+        "1,762 KL",
+        "3.55 tCO2e",
+        "8.4 tCO2e",
+        "1.4 million ",
+        "1.55 million ",
+        "0.3 million "
+      ],
+      "expected_disclosures": [
+        "14.8.4",
+        "14.8.5"
+      ]
+    },
+    {
+      "sr_no": 9,
+      "gri_topic": "Decommissioning and Abandonment",
+      "underlying_standard": "No GRI Topic Standard (GRI 11: Oil & Gas / GRI 12: Coal sector-specific)",
+      "coverage_rating": "Minimal",
+      "page_range": "N/A",
+      "disclosures": "N/A",
+      "reported": false,
+      "coverage_score_pct": 0.0,
+      "matched_keywords": [],
+      "evidence_snippets": [],
+      "key_metrics": [],
+      "expected_disclosures": [
+        "11.3.4",
+        "12.3.4"
+      ]
+    },
+    {
+      "sr_no": 10,
+      "gri_topic": "Land and Resource Rights",
+      "underlying_standard": "No GRI Topic Standard (GRI 14 sector-specific)",
+      "coverage_rating": "Strong",
+      "page_range": "40–109",
+      "disclosures": "N/A",
+      "reported": true,
+      "coverage_score_pct": 36.4,
+      "matched_keywords": [
+        "resettlement",
+        "land acquisition",
+        "displacement",
+        "fpic"
+      ],
+      "evidence_snippets": [
+        "ng trust Benefit Sha Health, Safety, Environmental  impacts | Loss of land and  resettlement | Human rights Vedanta Group’s governance structure ensures robust oversight of environmental, social, and governa The Board-level ESG Management Committee and the Sit",
+        "esponsible  advocacy Tailings Management Indigenous people &  cultural heritage Land Acquisition, Rehabilitation  and Closure Materials  Management &  Circularity Data Privacy and  Cybersecurity Human rights Step Step Step Step 5 2 6 4 g industry-specific mate",
+        "district Grievance Redressals Minimizing the acquisition  of land Disclosure of displacement  eligibility and entitlements Identification of Project Affected  People (PAP) Development of Livelihood Restoratio & Resettlement Action Plans Implem Monito resettlem"
+      ],
+      "key_metrics": [
+        "73 billion ",
+        "45.6 million \n"
+      ],
+      "expected_disclosures": [
+        "14.12.2"
+      ]
+    },
+    {
+      "sr_no": 11,
+      "gri_topic": "Artisanal and Small-Scale Mining",
+      "underlying_standard": "No GRI Topic Standard (GRI 14 sector-specific)",
+      "coverage_rating": "Minimal",
+      "page_range": "N/A",
+      "disclosures": "N/A",
+      "reported": false,
+      "coverage_score_pct": 0.0,
+      "matched_keywords": [],
+      "evidence_snippets": [],
+      "key_metrics": [],
+      "expected_disclosures": [
+        "14.13.2",
+        "14.13.3"
+      ]
+    },
+    {
+      "sr_no": 12,
+      "gri_topic": "Economic Impacts",
+      "underlying_standard": "GRI 201: Economic Performance 2016 + GRI 203: Indirect Economic Impacts 2016 + GRI 204: Procurement Practices 2016",
+      "coverage_rating": "Strong",
+      "page_range": "116–116",
+      "disclosures": "203-1, 203-2, 204-1",
+      "reported": true,
+      "coverage_score_pct": 37.5,
+      "matched_keywords": [
+        "local procurement",
+        "economic impact",
+        "infrastructure investment"
+      ],
+      "evidence_snippets": [
+        "tivity ~ 2 million Trees Planted 100% site Biodiversity Asses  380.95   billion Local Procurement  33   billion Employee Wages US m (Ve Sus Loa 65.85 million tCO2e GHG Emissions  93%  Total Volume of Waste Recycled (HVLT) ns  e ens of the world’s  We are in th",
+        "rocurement completed US$ 466 million CAPEX incurred e 2: Enhancing Capacity and Economic Impact  able Mining Practices Progress Sustainability Potential Our Solution Way Forward Future Pr Project Impact Problem Statement Our operations, primarily in mining  an",
+        "nt  Not Applicable No. Disclosure  Section Requirements  omitted  Reason 203-1  Infrastructure investments  and services supported  AIM 2: Empower  With Enhanced S Million Women A Welfare Intervent Factsheet, Social Pg. 206 203-2  Significant indirect economic"
+      ],
+      "key_metrics": [],
+      "expected_disclosures": [
+        "201-1",
+        "201-2",
+        "201-4",
+        "203-1",
+        "203-2",
+        "204-1"
+      ]
+    },
+    {
+      "sr_no": 13,
+      "gri_topic": "Local Communities",
+      "underlying_standard": "GRI 413: Local Communities 2016",
+      "coverage_rating": "Strong",
+      "page_range": "26–52",
+      "disclosures": "413-2",
+      "reported": true,
+      "coverage_score_pct": 88.9,
+      "matched_keywords": [
+        "local community",
+        "community engagement",
+        "community development",
+        "social impact",
+        "grievance mechanism",
+        "social license",
+        "community program",
+        "stakeholder engagement"
+      ],
+      "evidence_snippets": [
+        "should the  plant be allowed to reopen, it  should be with the backing of  the local community. Since 2018, the Sterlite Copper team has instituted a program for “Community Connects”  to have a systematic platform to engage in dialogue with local stakeholders",
+        "impact lie through local employment  and empowerment, the reason why  Vedanta’s community engagement and  development initiatives have almost  exclusively focused on these aspects.  Our goal to promote diversity, equality,  and inclusivity, very clearly identi",
+        "ttee of the Board. The Communities of Practice at the G levels, responsible for community development and infrastructure initiatives, report to the executive-le Committee. This structure ensures effective governance of all community and social development pro"
+      ],
+      "key_metrics": [
+        "0.23 million ",
+        "380.95 billion\n",
+        "0.03 million \n",
+        "1.55 million ",
+        "0.3 million "
+      ],
+      "expected_disclosures": [
+        "413-1",
+        "413-2"
+      ]
+    },
+    {
+      "sr_no": 14,
+      "gri_topic": "Human Rights",
+      "underlying_standard": "GRI 411: Rights of Indigenous Peoples 2016 + GRI 412: Human Rights Assessment 2016",
+      "coverage_rating": "Strong",
+      "page_range": "25–112",
+      "disclosures": "N/A",
+      "reported": true,
+      "coverage_score_pct": 66.7,
+      "matched_keywords": [
+        "human rights",
+        "due diligence",
+        "indigenous people",
+        "human rights assessment",
+        "modern slavery",
+        "human rights policy"
+      ],
+      "evidence_snippets": [
+        "eas that we work in  – community health, education, skilling,  and empowerment; human rights,  diversity, equity and inclusion, fair pay,  and fair representation; management  of GHG emissions, air emissions, water,  biodiversity, circularity – demonstrates  h",
+        "essment Human Rights Assessment l for human rights violations,  ve company-wide due diligence  atic periodic assessment  al human rights risks and their   This evaluation encompasses  our entire value chain, and in  Human rights due diligence is  our risk asse",
+        "and retention Learning &  Development Responsible  advocacy Tailings Management Indigenous people &  cultural heritage Land Acquisition, Rehabilitation  and Closure Materials  Management &  Circularity Data Privacy and  Cybersecurity Human rights Step Step Ste"
+      ],
+      "key_metrics": [
+        "1.55 million ",
+        "13.3 million ",
+        "0.23 million ",
+        "380.95 billion\n"
+      ],
+      "expected_disclosures": [
+        "411-1",
+        "412-1",
+        "412-2",
+        "412-3"
+      ]
+    },
+    {
+      "sr_no": 15,
+      "gri_topic": "Security Practices",
+      "underlying_standard": "GRI 410: Security Practices 2016",
+      "coverage_rating": "Moderate",
+      "page_range": "N/A",
+      "disclosures": "N/A",
+      "reported": true,
+      "coverage_score_pct": 33.3,
+      "matched_keywords": [
+        "security personnel",
+        "security practices"
+      ],
+      "evidence_snippets": [
+        "ations outlined in the  VPSHR. Regular training sessions are  conducted for our security personnel,  who serve as our initial line of defense  and primary reporters in instances of  human rights violations. We actively  engage with both private and public  sec",
+        "egration of ESG in our supply chain, Pg.  192 sonnel trained  ghts policies or  Security Practices, Pg. 86 Fact Sheet: Social, Pg. 204 oples  nt of material  Indigenous People’s Engagement, Pg.  80-82 Indigenous People  violations  hts of indigenous  Indigenou"
+      ],
+      "key_metrics": [],
+      "expected_disclosures": [
+        "410-1"
+      ]
+    },
+    {
+      "sr_no": 16,
+      "gri_topic": "Critical Incident Management",
+      "underlying_standard": "GRI 306: Effluents and Waste 2016 (GRI 14 sector-specific)",
+      "coverage_rating": "Strong",
+      "page_range": "77–77",
+      "disclosures": "N/A",
+      "reported": true,
+      "coverage_score_pct": 36.4,
+      "matched_keywords": [
+        "critical incident",
+        "emergency response",
+        "emergency preparedness",
+        "incident investigation"
+      ],
+      "evidence_snippets": [
+        "fficiency  measures  Regulatory compliance  related fines  Business reputation  Critical incident  management  Business reputation Emission and target  Decrease in employee  turnover rate  Stakeholder  engagement  Adherence to best  standards   Long sustainabl",
+        "We condcut regular  monitoring and inspections,  and preparation of detailed  emergency response plans. ments  Engineering and design  practices  Monitoring  Managing Risks, Opportunities  and Impacts  During FY 2023, we completed a  comprehensive assessment",
+        "tly affected – like workers and  local communities – so that the plans  address emergency preparedness and  long-term remediation.  ntation  cilities (TMF) are extremely critical parts of the metals and mining processing cycle and failure to  nd as stipulated"
+      ],
+      "key_metrics": [],
+      "expected_disclosures": [
+        "306-3",
+        "14.15.3",
+        "14.15.4"
+      ]
+    },
+    {
+      "sr_no": 17,
+      "gri_topic": "Asset Integrity and Process Safety",
+      "underlying_standard": "No GRI Topic Standard (GRI 11: Oil & Gas / GRI 12: Coal sector-specific)",
+      "coverage_rating": "Moderate",
+      "page_range": "N/A",
+      "disclosures": "11.2.4 (asset integrity and process safety (oil & gas))",
+      "reported": true,
+      "coverage_score_pct": 25.0,
+      "matched_keywords": [
+        "process safety",
+        "structural integrity",
+        "process hazard"
+      ],
+      "evidence_snippets": [
+        "threshold for pay-out under this component. Assuranc (Compliance, New Projects, Process Safety) etc. Safety Works (Work at Height, Confined Space, etc) Integration of  fatalities into  annual bonus Fatalities are a  negative multiplier  on the overall  perform",
+        "ow-toxicity wastes like fly-ash or red- mud can also prove to be risky, if the  structural integrity of storage structures  like tailings dams is not maintained All  this highlights the multidimensional  nature of waste management and the  resulting complexiti",
+        "Management | Data management | Action Plan Management | Audit &  Change (MoC) | Process Hazard Analysis (PHA) | Industrial Hygiene Governance Transparency Standardization Time Saving In 8 Process Digitized 350+ Indicators Type  Digitized 9k+ active users 8+ Le"
+      ],
+      "key_metrics": [],
+      "expected_disclosures": [
+        "11.2.4",
+        "12.2.4"
+      ]
+    },
+    {
+      "sr_no": 18,
+      "gri_topic": "Occupational Health & Safety",
+      "underlying_standard": "GRI 403: Occupational Health and Safety 2018",
+      "coverage_rating": "Strong",
+      "page_range": "79–117",
+      "disclosures": "403-1, 403-3, 403-4, 403-5, 403-6, 403-7, 403-8, 403-9, 403-10",
+      "reported": true,
+      "coverage_score_pct": 81.8,
+      "matched_keywords": [
+        "occupational health",
+        "workplace safety",
+        "fatality",
+        "injury",
+        "ltifr",
+        "trifr",
+        "work-related",
+        "health and safety management",
+        "lost time"
+      ],
+      "evidence_snippets": [
+        "tisfaction  Positive wok culture -  Degrading ambient air  quality  Ill-health  Occupational health  hazards Degrading ecosystem  Fair operations  Reduced risks  Transparent  communication  Grievance mechanism Risk  Revenue Cost C Transitioning to a lower- car",
+        "icense to  Operate  Strategy rolled out to  increase leadership  engagement in  workplace safety   To improve our Social  License to Operate,  a series of activities  begin – perception  surveys, materiality  assessment, social  performance review,  FPIC requi",
+        "rmance (not just  the ESG component) Annual bonus  pay-out 10% reduction on one fatality – leading to potential 25 overall in case of multiple fatalities Focus on long- term sustenance  (ESG framework  in LTIP) Integration of ESG  into long-term  strategic KPI"
+      ],
+      "key_metrics": [
+        "250 million "
+      ],
+      "expected_disclosures": [
+        "403-1",
+        "403-2",
+        "403-3",
+        "403-4",
+        "403-5",
+        "403-6",
+        "403-7",
+        "403-8",
+        "403-9",
+        "403-10"
+      ]
+    },
+    {
+      "sr_no": 19,
+      "gri_topic": "Employment Practices",
+      "underlying_standard": "GRI 202: Market Presence 2016 + GRI 401: Employment 2016 + GRI 402: Labor/Management Relations 2016 + GRI 404: Training and Education 2016 + GRI 414: Supplier Social Assessment 2016",
+      "coverage_rating": "Strong",
+      "page_range": "6–117",
+      "disclosures": "404-1, 414-1",
+      "reported": true,
+      "coverage_score_pct": 60.0,
+      "matched_keywords": [
+        "employee turnover",
+        "new hires",
+        "parental leave",
+        "training hours",
+        "skill development",
+        "talent development"
+      ],
+      "evidence_snippets": [
+        "FY 2023 FY 2024 ate 13.58 15.22 11.46 14 ver rate 6.53 11.15 8.86 11  Voluntary employee turnover rate: Age and Gender wise (FY24)   Gender Age Employee Turnove Male < 30 Yrs 30 - 50 Yrs > 50 Yrs Female < 30 Yrs 30 - 50 Yrs > 50 Yrs Total < 30 Yrs 30 - 50 Yrs",
+        "Rate 20% Gender Diversity  31 Average Training Hours Per  Person 32% Women as New Hires India’s first  All-Women Mining Rescue  Team at HZL 1.30 TRIFR 3 Fat 0.71x Water Positivity ~ 2 million Trees Planted 100% site Biodiversity Asses  380.95   billion Local",
+        "e  of a working day to accommodate  the new mothers’ breastfeeding  needs. Paid parental leaves Vedanta provides paid parental  leaves for both primary and  secondary caregivers, with 26  weeks of paid leave provided to  female employees, 7 days to male  emplo"
+      ],
+      "key_metrics": [
+        "544  \nmillion \n",
+        "2 million\n",
+        "380.95  \nbillion\n",
+        "33  \nbillion\n",
+        "65.85 million "
+      ],
+      "expected_disclosures": [
+        "202-1",
+        "401-1",
+        "401-2",
+        "401-3",
+        "402-1",
+        "404-1",
+        "404-2",
+        "404-3",
+        "414-1"
+      ]
+    },
+    {
+      "sr_no": 20,
+      "gri_topic": "Child Labour",
+      "underlying_standard": "GRI 408: Child Labour 2016 + GRI 414: Supplier Social Assessment 2016",
+      "coverage_rating": "Moderate",
+      "page_range": "N/A",
+      "disclosures": "414-1",
+      "reported": true,
+      "coverage_score_pct": 28.6,
+      "matched_keywords": [
+        "child labour",
+        "minor"
+      ],
+      "evidence_snippets": [
+        "ential Human  Rights Risks  Mitigation actions  Forced labour Human trafficking Child labour Freedom of association Right to collective bargaining Equal remuneration Discrimination Planning Implementation Ensuring Action  Policies and  standards to reduce  the",
+        "the sustainability  report on full consolidation method,  without adjusting for minority interest  in the relevant group entity, based  on operational control, as per our  assessment. In newly incorporated  indicators, previous year figures have  not been prov"
+      ],
+      "key_metrics": [],
+      "expected_disclosures": [
+        "408-1",
+        "414-1"
+      ]
+    },
+    {
+      "sr_no": 21,
+      "gri_topic": "Forced Labour & Modern Slavery",
+      "underlying_standard": "GRI 409: Forced or Compulsory Labour 2016 + GRI 414: Supplier Social Assessment 2016",
+      "coverage_rating": "Strong",
+      "page_range": "44–44",
+      "disclosures": "414-1",
+      "reported": true,
+      "coverage_score_pct": 37.5,
+      "matched_keywords": [
+        "forced labour",
+        "modern slavery",
+        "human trafficking"
+      ],
+      "evidence_snippets": [
+        "d Mitigation  actions taken: Potential Human  Rights Risks  Mitigation actions  Forced labour Human trafficking Child labour Freedom of association Right to collective bargaining Equal remuneration Discrimination Planning Implementation Ensuring Action  Polici",
+        "ilings  dams management  Drive effective  implementation of  provisions of the  Modern Slavery Act  across our businesses   Re-evaluation of our  social performance  standards to enhance  our Social License to  Operate  Strategy rolled out to  increase leaders",
+        "actions taken: Potential Human  Rights Risks  Mitigation actions  Forced labour Human trafficking Child labour Freedom of association Right to collective bargaining Equal remuneration Discrimination Planning Implementation Ensuring Action  Policies and  standa"
+      ],
+      "key_metrics": [],
+      "expected_disclosures": [
+        "409-1",
+        "414-1"
+      ]
+    },
+    {
+      "sr_no": 22,
+      "gri_topic": "Freedom of Association",
+      "underlying_standard": "GRI 407: Freedom of Association and Collective Bargaining 2016",
+      "coverage_rating": "Moderate",
+      "page_range": "44–112",
+      "disclosures": "N/A",
+      "reported": true,
+      "coverage_score_pct": 33.3,
+      "matched_keywords": [
+        "freedom of association",
+        "collective bargaining"
+      ],
+      "evidence_snippets": [
+        "Rights Risks  Mitigation actions  Forced labour Human trafficking Child labour Freedom of association Right to collective bargaining Equal remuneration Discrimination Planning Implementation Ensuring Action  Policies and  standards to reduce  the risk level i",
+        "s  Forced labour Human trafficking Child labour Freedom of association Right to collective bargaining Equal remuneration Discrimination Planning Implementation Ensuring Action  Policies and  standards to reduce  the risk level in high- risk areas: Establish  c"
+      ],
+      "key_metrics": [
+        "0.03 million \n"
+      ],
+      "expected_disclosures": [
+        "407-1"
+      ]
+    },
+    {
+      "sr_no": 23,
+      "gri_topic": "Non-discrimination & Equal Opportunity",
+      "underlying_standard": "GRI 202: Market Presence 2016 + GRI 405: Diversity and Equal Opportunity 2016 + GRI 406: Non-discrimination 2016",
+      "coverage_rating": "Strong",
+      "page_range": "6–117",
+      "disclosures": "N/A",
+      "reported": true,
+      "coverage_score_pct": 72.7,
+      "matched_keywords": [
+        "diversity",
+        "inclusion",
+        "gender equality",
+        "discrimination",
+        "women in workforce",
+        "dei",
+        "gender diversity",
+        "inclusive workplace"
+      ],
+      "evidence_snippets": [
+        "e-related financial disclosures Standards/guidelines used:  Approach towards biodiversity  strategy, risk management V E D A N T A  L I M I T E D  TNFD Report 2024 Further, some of the entities/ sites are  considered for the purpose of said  financial numbers,",
+        "a’s marginalized people and  contributing towards social upliftment,  financial inclusion, and nation building,  are aims that we have pursued with  painstaking effort. The results have  been overwhelmingly positive. Today,  through our Nand Ghar, and other  C",
+        "volving women from the  community, highlight the programme’s  role in promoting gender equality and  empowerment through sports. Broader Impact: By providing a structured environment, advanced training fac overall development, the programme is not just creatin"
+      ],
+      "key_metrics": [
+        "5.66 TCO2e",
+        "66,551 tonnes",
+        "25,000 \ntonnes",
+        "544  \nmillion \n",
+        "2 million\n",
+        "380.95  \nbillion\n",
+        "33  \nbillion\n",
+        "65.85 million "
+      ],
+      "expected_disclosures": [
+        "202-2",
+        "405-1",
+        "405-2",
+        "406-1"
+      ]
+    },
+    {
+      "sr_no": 24,
+      "gri_topic": "Anti-corruption",
+      "underlying_standard": "GRI 205: Anti-corruption 2016",
+      "coverage_rating": "Strong",
+      "page_range": "25–116",
+      "disclosures": "205-1, 205-2, 205-3",
+      "reported": true,
+      "coverage_score_pct": 60.0,
+      "matched_keywords": [
+        "anti-corruption",
+        "bribery",
+        "corruption",
+        "code of conduct",
+        "ethics",
+        "compliance"
+      ],
+      "evidence_snippets": [
+        "FY 24 13 ce 1 0 6 der trading 0 Ps/employees/workers that received training on Anti-corruption practices FY 24 25% 75% 100% 100% rams support s KMPs/employees/workers that received training on Anti-corruption practices  GRI Content Index Reference  No. Disclo",
+        "exual  s & equal  aundering,  ntertainment  onsorship, and  o includes the  nti-bribery and  loyees of the  /business  anta or on  Workforce Breakdown: Nationality Remuneration Ratio Female to Male nd diversity  izational  ed key  KPIs) into our  d Governance",
+        "duct &  a guiding  es and  s are in line  s of business  COBCE is  ent that  ti-corruption  conflict  sexual  s & equal  aundering,  ntertainment  onsorship, and  o includes the  nti-bribery and  loyees of the  /business  anta or on  Workforce Breakdown: Natio"
+      ],
+      "key_metrics": [],
+      "expected_disclosures": [
+        "205-1",
+        "205-2",
+        "205-3"
+      ]
+    },
+    {
+      "sr_no": 25,
+      "gri_topic": "Anti-competitive Behavior",
+      "underlying_standard": "GRI 206: Anti-competitive Behavior 2016",
+      "coverage_rating": "Partial",
+      "page_range": "N/A",
+      "disclosures": "206-1",
+      "reported": true,
+      "coverage_score_pct": 10.0,
+      "matched_keywords": [
+        "monopoly"
+      ],
+      "evidence_snippets": [
+        "sheet: G 206-1  Legal actions for anti- competitive behaviour, anti- trust, and monopoly practices  Integrated Annua Pg. 327 207-1  Approach to tax  Tax Transparency 207-2  Tax governance, control, and  risk management  Tax Transparency 20-25 207-3  Stakeholde"
+      ],
+      "key_metrics": [],
+      "expected_disclosures": [
+        "206-1"
+      ]
+    },
+    {
+      "sr_no": 26,
+      "gri_topic": "Payments to Governments",
+      "underlying_standard": "GRI 201: Economic Performance 2016 + GRI 207: Tax 2019",
+      "coverage_rating": "Strong",
+      "page_range": "4–108",
+      "disclosures": "207-1, 207-2, 207-3, 207-4",
+      "reported": true,
+      "coverage_score_pct": 66.7,
+      "matched_keywords": [
+        "tax",
+        "royalties",
+        "payments to government",
+        "country-by-country",
+        "tax transparency",
+        "tax governance"
+      ],
+      "evidence_snippets": [
+        "suite This report should be read along with our Annual Integrated Report, BRSR, Tax Transparency Report a Cross references have been added throughout this report for better understanding and consistency. Our entire reporting suite, over consecutive years, can",
+        "low  Support to G initiatives thr to local econ  Contribution building thro and royalties  Policy advoc the company  Suggest proj administratio for considera funds in min Channel of comm  Government  Engagement and regional business and  Meet all the  ommunity",
+        "in  HR Excellence”  at the 14th CII National HR Recognised for  544   million  Payments to Government  89% Employee Satisfaction  Rate 20% Gender Diversity  31 Average Training Hours Per  Person 32% Women as New Hires India’s first  All-Women Mining Rescue  T"
+      ],
+      "key_metrics": [],
+      "expected_disclosures": [
+        "201-1",
+        "201-4",
+        "207-1",
+        "207-2",
+        "207-3",
+        "207-4"
+      ]
+    },
+    {
+      "sr_no": 27,
+      "gri_topic": "Public Policy",
+      "underlying_standard": "GRI 415: Public Policy 2016",
+      "coverage_rating": "Strong",
+      "page_range": "26–111",
+      "disclosures": "415-1",
+      "reported": true,
+      "coverage_score_pct": 57.1,
+      "matched_keywords": [
+        "political contribution",
+        "public policy",
+        "advocacy",
+        "industry association"
+      ],
+      "evidence_snippets": [
+        "hain and actions  taken  Factsheet: Gover Assessment, Pg.  Public Policy 415-1  Political contributions  Integrated annua Customer Privacy  418-1 Substantiated complaints  concerning breaches of  customer privacy and losses  of customer data  Factsheet: Gover",
+        "acts in  the supply chain and actions  taken  Factsheet: Gover Assessment, Pg.  Public Policy 415-1  Political contributions  Integrated annua Customer Privacy  418-1 Substantiated complaints  concerning breaches of  customer privacy and losses  of customer da",
+        "ealize the fruits of  their efforts, further driving adoption,  acceptance, and advocacy. ability Strategy cts are essential in daily life, used globally in industries from  entertainment. From greener buildings to cleaner cars, and from  arge, our products to"
+      ],
+      "key_metrics": [
+        "2.5 Million ",
+        "5 Million "
+      ],
+      "expected_disclosures": [
+        "415-1"
+      ]
+    },
+    {
+      "sr_no": 28,
+      "gri_topic": "Conflict-affected Areas",
+      "underlying_standard": "No GRI Topic Standard (GRI 14 sector-specific)",
+      "coverage_rating": "Moderate",
+      "page_range": "98–98",
+      "disclosures": "N/A",
+      "reported": true,
+      "coverage_score_pct": 25.0,
+      "matched_keywords": [
+        "high-risk area",
+        "conflict-affected"
+      ],
+      "evidence_snippets": [
+        "year, 8 high risk suppliers were  urcing, particularly in conflict-affected and high-risk areas (CAHRA), Vedanta implements robust  ctices for conducting due diligence. This enables the company to identify, assess, and effectively  ssociated with its supply ch",
+        "suppliers. During the year, 8 high risk suppliers were  urcing, particularly in conflict-affected and high-risk areas (CAHRA), Vedanta implements robust  ctices for conducting due diligence. This enables the company to identify, assess, and effectively  ssocia"
+      ],
+      "key_metrics": [],
+      "expected_disclosures": [
+        "14.25.2"
+      ]
+    },
+    {
+      "sr_no": 29,
+      "gri_topic": "Responsible Supply Chain",
+      "underlying_standard": "GRI 308: Supplier Environmental Assessment 2016 + GRI 414: Supplier Social Assessment 2016",
+      "coverage_rating": "Strong",
+      "page_range": "2–111",
+      "disclosures": "414-1, 414-2",
+      "reported": true,
+      "coverage_score_pct": 40.0,
+      "matched_keywords": [
+        "supply chain",
+        "responsible sourcing",
+        "supplier code",
+        "tin"
+      ],
+      "evidence_snippets": [
+        "Our Stakeholders 56     ESG Scorecard 179   Human Capital   Development 190   Supply Chain M 196   ESG Factsheet 211   GRI Content In As India’s largest, most diversified,  best integrated, low-cost minerals,  metals and oil & gas producer,  Vedanta is uniqu",
+        "ely supplies and streamlined logistics,  is crucial to meet sustainability and  responsible sourcing goals. Furthermore,  ensuring the safety of workers and the  workplace is equally imperative. Channel of communication:  Customer satisfaction surveys   Vendor",
+        "Officers of each of the Business Units are accountable for implementation  of supplier code of conduct and supply chain related strategy. dard for  Management,  performance  core  ess partner  ure. This  establishes a  or managing  pliers  roughout  ply chai"
+      ],
+      "key_metrics": [
+        "700 billion",
+        "1.9 billion "
+      ],
+      "expected_disclosures": [
+        "308-1",
+        "308-2",
+        "414-1",
+        "414-2"
+      ]
+    },
+    {
+      "sr_no": 30,
+      "gri_topic": "Product Safety & Quality",
+      "underlying_standard": "GRI 416: Customer Health and Safety 2016",
+      "coverage_rating": "Partial",
+      "page_range": "N/A",
+      "disclosures": "N/A",
+      "reported": true,
+      "coverage_score_pct": 11.1,
+      "matched_keywords": [
+        "recall"
+      ],
+      "evidence_snippets": [
+        "CEO actively initiates  discussions and sets into motion activities that aim at recalling the  circumstances and causes of these past incidents, how the learnings have  been imbibed, and taking stock of whether progress has been made. Safety Performance At Ved"
+      ],
+      "key_metrics": [],
+      "expected_disclosures": [
+        "416-1",
+        "416-2"
+      ]
+    },
+    {
+      "sr_no": 31,
+      "gri_topic": "Data Privacy & Cybersecurity",
+      "underlying_standard": "GRI 418: Customer Privacy 2016",
+      "coverage_rating": "Strong",
+      "page_range": "27–112",
+      "disclosures": "418-1",
+      "reported": true,
+      "coverage_score_pct": 60.0,
+      "matched_keywords": [
+        "data privacy",
+        "cybersecurity",
+        "privacy",
+        "data breach",
+        "information security",
+        "data governance"
+      ],
+      "evidence_snippets": [
+        "d Acquisition, Rehabilitation  and Closure Materials  Management &  Circularity Data Privacy and  Cybersecurity Human rights Step Step Step Step 5 2 6 4 g industry-specific material topics  tially, material topics were selected  ons from four industry standard",
+        "abilitation  and Closure Materials  Management &  Circularity Data Privacy and  Cybersecurity Human rights Step Step Step Step 5 2 6 4 g industry-specific material topics  tially, material topics were selected  ons from four industry standards:  and ICMM, whic",
+        "Code of Business Conduct and Ethics.   Ensuring contractual integrity and data  privacy. Key expectatio  Complaint w requirements 1,229 Complaints filed 476  Complaints filed - 1,059 Complaints filed - gy: Connecting Voices for Impact : Community Engagement te"
+      ],
+      "key_metrics": [],
+      "expected_disclosures": [
+        "418-1"
+      ]
+    },
+    {
+      "sr_no": 32,
+      "gri_topic": "Responsible AI",
+      "underlying_standard": "No specific GRI standard — emerging topic",
+      "coverage_rating": "Partial",
+      "page_range": "N/A",
+      "disclosures": "N/A",
+      "reported": true,
+      "coverage_score_pct": 11.1,
+      "matched_keywords": [
+        "artificial intelligence"
+      ],
+      "evidence_snippets": [
+        "obal Business Standards  Of Corporate Governance 170-178 Acronyms Full Forms AI Artificial Intelligence ARD Acid Rock Drainage BALCO Bharat Aluminium Company Limited BITS Birla Institute of Technology and Science BMP Biodiversity Management Plan BU Business Un"
+      ],
+      "key_metrics": [],
+      "expected_disclosures": [
+        "(Emerging — no GRI disclosure yet)"
+      ]
+    },
+    {
+      "sr_no": 33,
+      "gri_topic": "Food Security",
+      "underlying_standard": "No GRI Topic Standard (GRI 13: Agriculture, Aquaculture & Fishing sector-specific)",
+      "coverage_rating": "Moderate",
+      "page_range": "N/A",
+      "disclosures": "N/A",
+      "reported": true,
+      "coverage_score_pct": 33.3,
+      "matched_keywords": [
+        "food security",
+        "nutrition",
+        "hunger",
+        "sustainable agriculture"
+      ],
+      "evidence_snippets": [
+        "ns, leading to droughts and  floods, further affecting agricultural  growth and food security. The lack  of adequate market infrastructure,  post-harvest management practices,  and poor extension services contribute  to the vulnerability of the farming  commun",
+        "work evaluates wage  standards necessary for providing  adequate housing, basic nutritional  requirements, education, healthcare,  and savings. By FY 2030, we aim to set the living  wage across all our operational sites  and to assess the wage structure  of fu",
+        "ized by Vedanta, over 50,000  individuals participated in support  of the “Zero Hunger” cause. With  enthusiastic participation from  both international and domestic  runners, Vedanta successfully  pledged 5 million meals towards  fostering a healthy and nouri"
+      ],
+      "key_metrics": [],
+      "expected_disclosures": [
+        "13.6.4",
+        "13.6.5"
+      ]
+    },
+    {
+      "sr_no": 34,
+      "gri_topic": "Animal Welfare",
+      "underlying_standard": "No GRI Topic Standard (GRI 13: Agriculture, Aquaculture & Fishing sector-specific)",
+      "coverage_rating": "Minimal",
+      "page_range": "N/A",
+      "disclosures": "N/A",
+      "reported": false,
+      "coverage_score_pct": 0.0,
+      "matched_keywords": [],
+      "evidence_snippets": [],
+      "key_metrics": [],
+      "expected_disclosures": [
+        "13.7.4",
+        "13.7.5"
+      ]
+    },
+    {
+      "sr_no": 35,
+      "gri_topic": "Pesticides and Agrochemicals",
+      "underlying_standard": "No GRI Topic Standard (GRI 13: Agriculture, Aquaculture & Fishing sector-specific)",
+      "coverage_rating": "Minimal",
+      "page_range": "N/A",
+      "disclosures": "N/A",
+      "reported": false,
+      "coverage_score_pct": 0.0,
+      "matched_keywords": [],
+      "evidence_snippets": [],
+      "key_metrics": [],
+      "expected_disclosures": [
+        "13.8.4",
+        "13.8.5"
+      ]
+    },
+    {
+      "sr_no": 36,
+      "gri_topic": "Fishing and Aquaculture Practices",
+      "underlying_standard": "No GRI Topic Standard (GRI 13: Agriculture, Aquaculture & Fishing sector-specific)",
+      "coverage_rating": "Minimal",
+      "page_range": "N/A",
+      "disclosures": "N/A",
+      "reported": false,
+      "coverage_score_pct": 0.0,
+      "matched_keywords": [],
+      "evidence_snippets": [],
+      "key_metrics": [],
+      "expected_disclosures": [
+        "13.9.4",
+        "13.9.5"
+      ]
+    },
+    {
+      "sr_no": 37,
+      "gri_topic": "Corporate Governance",
+      "underlying_standard": "GRI 2: General Disclosures 2021 (2-9 to 2-20)",
+      "coverage_rating": "Strong",
+      "page_range": "11–116",
+      "disclosures": "2-9, 2-10, 2-11, 2-12, 2-13, 2-14, 2-15, 2-16, 2-17, 2-18, 2-19, 2-20",
+      "reported": true,
+      "coverage_score_pct": 66.7,
+      "matched_keywords": [
+        "board of directors",
+        "governance",
+        "independent director",
+        "audit committee",
+        "risk management",
+        "corporate governance"
+      ],
+      "evidence_snippets": [
+        "nmental policy  3  Energy and climate technical  standards Governance Vedanta’s Board of Directors play a crucial  role in climate change governance. They  approve the company’s overall climate change  strategy, including decarbonization plans.  Climate-relate",
+        "ng       Driven By Our Purpose 08    Key ESG Highlights For 2024 40 Sustainable Governance 44     Our Stakeholders 56     ESG Scorecard 179   Human Capital   Development 190   Supply Chain M 196   ESG Factsheet 211   GRI Content In As India’s largest, most div",
+        "Board oversight Composition of the Board ESG Committee UK Sinha  Non-Executive Independent Director Akhilesh Joshi Non-Executive   Independent Director Priya Agarwal Non-Executive   Non-Independent Director A Exec BU/SBU-level implementation ch is a  mmittee,"
+      ],
+      "key_metrics": [
+        "5.66  tCO2",
+        "78 \nmillion ",
+        "85 million ",
+        "2 million \n",
+        "78 million ",
+        "85 million \n",
+        "5 billion ",
+        "65.85   million "
+      ],
+      "expected_disclosures": [
+        "2-9",
+        "2-10",
+        "2-11",
+        "2-12",
+        "2-13",
+        "2-14",
+        "2-15",
+        "2-16",
+        "2-17",
+        "2-18",
+        "2-19",
+        "2-20"
+      ]
+    }
+  ]
+}

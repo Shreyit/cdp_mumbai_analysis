@@ -1,0 +1,21 @@
+{
+  "standard_id": "GRI 1",
+  "name": "Foundation",
+  "version": "2021",
+  "effective_date": "2023-01-01",
+  "category": "universal",
+  "pillar": "universal",
+  "sector_applicability": [
+    "all"
+  ],
+  "page_count": 38,
+  "source_file": "GRI 1_ Foundation 2021.pdf",
+  "purpose": "GRI 1: Foundation 2021 introduces the purpose and system of the GRI Sustainability Reporting Standards (GRI Standards) and explains key concepts for sustainability reporting. It also specifies the requirements and reporting principles that organizations must comply with to report in accordance with the GRI Standards. GRI 1 is the first Standard that organizations should consult to understand how to report using the GRI Standards. GRI 1 is structured as follows: • Section 1 introduces the purpose",
+  "disclosures": [],
+  "management_approach": {
+    "code": "3-3",
+    "applies": false
+  },
+  "indexed_at": "2026-07-21T11:12:41",
+  "raw_text_length": 101268
+}

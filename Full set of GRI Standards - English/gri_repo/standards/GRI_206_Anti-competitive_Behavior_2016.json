@@ -1,0 +1,30 @@
+{
+  "standard_id": "GRI 206",
+  "name": "Anti-competitive Behavior",
+  "version": "2016",
+  "effective_date": "2018-07-01",
+  "category": "topic",
+  "pillar": "governance",
+  "sector_applicability": [
+    "all"
+  ],
+  "page_count": 13,
+  "source_file": "GRI 206_ Anti-competitive Behavior 2016.pdf",
+  "purpose": "GRI 206: Anti-competitive Behavior 2016 contains disclosures for organizations to report information about their anti- competitive behavior-related impacts, and how they manage these impacts. The Standard is structured as follows: • Section 1 contains a requirement, which provides information about how the organization manages its anti- competitive behavior-related impact. • Section 2 contains one disclosure, which provides information about the organization’s anti-competitive behavior- related ",
+  "disclosures": [
+    {
+      "code": "206-1",
+      "title": "Legal actions for anti-competitive behavior, anti-trust, and",
+      "type": "qualitative",
+      "requirements": [],
+      "guidance": "",
+      "related_sdgs": []
+    }
+  ],
+  "management_approach": {
+    "code": "3-3",
+    "applies": true
+  },
+  "indexed_at": "2026-07-21T11:12:10",
+  "raw_text_length": 18901
+}

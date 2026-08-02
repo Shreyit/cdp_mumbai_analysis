@@ -1,0 +1,792 @@
+{
+  "metadata": {
+    "company_name": "Sony Group Corporation",
+    "report_year": "2025",
+    "report_type": "Sustainability Report",
+    "sector_standard": null,
+    "total_pages": 208,
+    "extraction_ts": "2026-07-21T11:00:01"
+  },
+  "gri_coverage": [
+    {
+      "sr_no": 1,
+      "gri_topic": "Climate Change",
+      "underlying_standard": "GRI 302: Energy 2016 + GRI 305: Emissions 2016",
+      "coverage_rating": "Strong",
+      "pages": "205",
+      "disclosures": "302-1, 302-2, 302-3, 302-5, 305-1, 305-2, 305-3, 305-4, 305-5, 305-6, 305-7",
+      "reported": true,
+      "found_disclosures": [
+        "302-1",
+        "302-2",
+        "302-3",
+        "302-5",
+        "305-1",
+        "305-2",
+        "305-3",
+        "305-4",
+        "305-5",
+        "305-6",
+        "305-7"
+      ],
+      "expected_disclosures": [
+        "302-1",
+        "302-2",
+        "302-3",
+        "302-5",
+        "305-1",
+        "305-2",
+        "305-3",
+        "305-4",
+        "305-5",
+        "305-6",
+        "305-7"
+      ],
+      "coverage_pct": 100.0
+    },
+    {
+      "sr_no": 2,
+      "gri_topic": "Air Emissions",
+      "underlying_standard": "GRI 305: Emissions 2016",
+      "coverage_rating": "Strong",
+      "pages": "205",
+      "disclosures": "305-1, 305-2, 305-3, 305-4, 305-5, 305-6, 305-7",
+      "reported": true,
+      "found_disclosures": [
+        "305-1",
+        "305-2",
+        "305-3",
+        "305-4",
+        "305-5",
+        "305-6",
+        "305-7"
+      ],
+      "expected_disclosures": [
+        "305-1",
+        "305-2",
+        "305-3",
+        "305-4",
+        "305-5",
+        "305-6",
+        "305-7"
+      ],
+      "coverage_pct": 100.0
+    },
+    {
+      "sr_no": 3,
+      "gri_topic": "Materials",
+      "underlying_standard": "GRI 301: Materials 2016",
+      "coverage_rating": "Strong",
+      "pages": "205",
+      "disclosures": "301-1, 301-2, 301-3",
+      "reported": true,
+      "found_disclosures": [
+        "301-1",
+        "301-2",
+        "301-3"
+      ],
+      "expected_disclosures": [
+        "301-1",
+        "301-2",
+        "301-3"
+      ],
+      "coverage_pct": 100.0
+    },
+    {
+      "sr_no": 4,
+      "gri_topic": "Biodiversity",
+      "underlying_standard": "GRI 101: Biodiversity 2024 + GRI 304",
+      "coverage_rating": "Minimal",
+      "pages": "N/A",
+      "disclosures": "N/A",
+      "reported": false,
+      "found_disclosures": [],
+      "expected_disclosures": [
+        "101-1",
+        "101-2",
+        "101-3",
+        "101-4",
+        "101-5",
+        "101-6",
+        "101-7",
+        "101-8"
+      ],
+      "coverage_pct": 0.0
+    },
+    {
+      "sr_no": 5,
+      "gri_topic": "Waste",
+      "underlying_standard": "GRI 306: Waste 2020",
+      "coverage_rating": "Strong",
+      "pages": "205, 206",
+      "disclosures": "306-1, 306-2, 306-3, 306-4, 306-5",
+      "reported": true,
+      "found_disclosures": [
+        "306-1",
+        "306-2",
+        "306-3",
+        "306-4",
+        "306-5"
+      ],
+      "expected_disclosures": [
+        "306-1",
+        "306-2",
+        "306-3",
+        "306-4",
+        "306-5"
+      ],
+      "coverage_pct": 100.0
+    },
+    {
+      "sr_no": 6,
+      "gri_topic": "Water and Effluents",
+      "underlying_standard": "GRI 303: Water and Effluents 2018",
+      "coverage_rating": "Strong",
+      "pages": "205",
+      "disclosures": "303-1, 303-2, 303-3, 303-4, 303-5",
+      "reported": true,
+      "found_disclosures": [
+        "303-1",
+        "303-2",
+        "303-3",
+        "303-4",
+        "303-5"
+      ],
+      "expected_disclosures": [
+        "303-1",
+        "303-2",
+        "303-3",
+        "303-4",
+        "303-5"
+      ],
+      "coverage_pct": 100.0
+    },
+    {
+      "sr_no": 7,
+      "gri_topic": "Tailings",
+      "underlying_standard": "No GRI Standard",
+      "coverage_rating": "N/A",
+      "pages": "N/A",
+      "disclosures": "N/A",
+      "reported": false,
+      "found_disclosures": [],
+      "expected_disclosures": [],
+      "coverage_pct": 0
+    },
+    {
+      "sr_no": 8,
+      "gri_topic": "Closure and Rehabilitation",
+      "underlying_standard": "GRI 402: Labor and Management Relations 2016 + GRI 404: Training and Education 2016",
+      "coverage_rating": "Strong",
+      "pages": "206",
+      "disclosures": "402-1, 404-1, 404-2, 404-3",
+      "reported": true,
+      "found_disclosures": [
+        "402-1",
+        "404-1",
+        "404-2",
+        "404-3"
+      ],
+      "expected_disclosures": [
+        "402-1",
+        "404-1",
+        "404-2",
+        "404-3"
+      ],
+      "coverage_pct": 100.0
+    },
+    {
+      "sr_no": 9,
+      "gri_topic": "Land and Resource Rights",
+      "underlying_standard": "No GRI Standard",
+      "coverage_rating": "N/A",
+      "pages": "N/A",
+      "disclosures": "N/A",
+      "reported": false,
+      "found_disclosures": [],
+      "expected_disclosures": [],
+      "coverage_pct": 0
+    },
+    {
+      "sr_no": 10,
+      "gri_topic": "Artisanal and Small-Scale Mining",
+      "underlying_standard": "No GRI Standard",
+      "coverage_rating": "N/A",
+      "pages": "N/A",
+      "disclosures": "N/A",
+      "reported": false,
+      "found_disclosures": [],
+      "expected_disclosures": [],
+      "coverage_pct": 0
+    },
+    {
+      "sr_no": 11,
+      "gri_topic": "Critical Incident Management",
+      "underlying_standard": "GRI 306: Waste 2020",
+      "coverage_rating": "Strong",
+      "pages": "205, 206",
+      "disclosures": "306-1, 306-2, 306-3, 306-4, 306-5",
+      "reported": true,
+      "found_disclosures": [
+        "306-1",
+        "306-2",
+        "306-3",
+        "306-4",
+        "306-5"
+      ],
+      "expected_disclosures": [
+        "306-1",
+        "306-2",
+        "306-3",
+        "306-4",
+        "306-5"
+      ],
+      "coverage_pct": 100.0
+    },
+    {
+      "sr_no": 12,
+      "gri_topic": "Conflict-affected Areas",
+      "underlying_standard": "No GRI Standard",
+      "coverage_rating": "N/A",
+      "pages": "N/A",
+      "disclosures": "N/A",
+      "reported": false,
+      "found_disclosures": [],
+      "expected_disclosures": [],
+      "coverage_pct": 0
+    },
+    {
+      "sr_no": 13,
+      "gri_topic": "Decommissioning and Abandonment",
+      "underlying_standard": "No GRI Standard",
+      "coverage_rating": "N/A",
+      "pages": "N/A",
+      "disclosures": "N/A",
+      "reported": false,
+      "found_disclosures": [],
+      "expected_disclosures": [],
+      "coverage_pct": 0
+    },
+    {
+      "sr_no": 14,
+      "gri_topic": "Asset Integrity and Process Safety",
+      "underlying_standard": "No GRI Standard",
+      "coverage_rating": "N/A",
+      "pages": "N/A",
+      "disclosures": "N/A",
+      "reported": false,
+      "found_disclosures": [],
+      "expected_disclosures": [],
+      "coverage_pct": 0
+    },
+    {
+      "sr_no": 15,
+      "gri_topic": "Economic Impacts",
+      "underlying_standard": "GRI 201: Economic Performance 2016 + GRI 203: Indirect Economic Impacts 2016 + GRI 204: Procurement Practices 2016",
+      "coverage_rating": "Strong",
+      "pages": "204",
+      "disclosures": "201-1, 201-2, 201-3, 201-4, 203-1, 203-2, 204-1",
+      "reported": true,
+      "found_disclosures": [
+        "201-1",
+        "201-2",
+        "201-3",
+        "201-4",
+        "203-1",
+        "203-2",
+        "204-1"
+      ],
+      "expected_disclosures": [
+        "201-1",
+        "201-2",
+        "201-3",
+        "201-4",
+        "203-1",
+        "203-2",
+        "204-1"
+      ],
+      "coverage_pct": 100.0
+    },
+    {
+      "sr_no": 16,
+      "gri_topic": "Payments to Governments",
+      "underlying_standard": "GRI 201: Economic Performance 2016 + GRI 207: Tax 2019",
+      "coverage_rating": "Strong",
+      "pages": "204",
+      "disclosures": "201-1, 201-2, 201-3, 201-4, 207-1, 207-2, 207-3, 207-4",
+      "reported": true,
+      "found_disclosures": [
+        "201-1",
+        "201-2",
+        "201-3",
+        "201-4",
+        "207-1",
+        "207-2",
+        "207-3",
+        "207-4"
+      ],
+      "expected_disclosures": [
+        "201-1",
+        "201-2",
+        "201-3",
+        "201-4",
+        "207-1",
+        "207-2",
+        "207-3",
+        "207-4"
+      ],
+      "coverage_pct": 100.0
+    },
+    {
+      "sr_no": 17,
+      "gri_topic": "Anti-competitive Behavior",
+      "underlying_standard": "GRI 206: Anti-competitive Behavior 2016",
+      "coverage_rating": "Strong",
+      "pages": "204",
+      "disclosures": "206-1",
+      "reported": true,
+      "found_disclosures": [
+        "206-1"
+      ],
+      "expected_disclosures": [
+        "206-1"
+      ],
+      "coverage_pct": 100.0
+    },
+    {
+      "sr_no": 18,
+      "gri_topic": "Local Communities",
+      "underlying_standard": "GRI 413: Local Communities 2016",
+      "coverage_rating": "Strong",
+      "pages": "207",
+      "disclosures": "413-1, 413-2",
+      "reported": true,
+      "found_disclosures": [
+        "413-1",
+        "413-2"
+      ],
+      "expected_disclosures": [
+        "413-1",
+        "413-2"
+      ],
+      "coverage_pct": 100.0
+    },
+    {
+      "sr_no": 19,
+      "gri_topic": "Human Rights",
+      "underlying_standard": "GRI 411: Rights of Indigenous Peoples 2016 + GRI 412",
+      "coverage_rating": "Strong",
+      "pages": "207",
+      "disclosures": "411-1",
+      "reported": true,
+      "found_disclosures": [
+        "411-1"
+      ],
+      "expected_disclosures": [
+        "411-1"
+      ],
+      "coverage_pct": 100.0
+    },
+    {
+      "sr_no": 20,
+      "gri_topic": "Security Practices",
+      "underlying_standard": "GRI 410: Security Practices 2016",
+      "coverage_rating": "Strong",
+      "pages": "207",
+      "disclosures": "410-1",
+      "reported": true,
+      "found_disclosures": [
+        "410-1"
+      ],
+      "expected_disclosures": [
+        "410-1"
+      ],
+      "coverage_pct": 100.0
+    },
+    {
+      "sr_no": 21,
+      "gri_topic": "Occupational Health & Safety",
+      "underlying_standard": "GRI 403: Occupational Health and Safety 2018",
+      "coverage_rating": "Strong",
+      "pages": "206",
+      "disclosures": "403-1, 403-10, 403-2, 403-3, 403-4, 403-5, 403-6, 403-7, 403-8, 403-9",
+      "reported": true,
+      "found_disclosures": [
+        "403-1",
+        "403-2",
+        "403-3",
+        "403-4",
+        "403-5",
+        "403-6",
+        "403-7",
+        "403-8",
+        "403-9",
+        "403-10"
+      ],
+      "expected_disclosures": [
+        "403-1",
+        "403-2",
+        "403-3",
+        "403-4",
+        "403-5",
+        "403-6",
+        "403-7",
+        "403-8",
+        "403-9",
+        "403-10",
+        "403-9."
+      ],
+      "coverage_pct": 90.9
+    },
+    {
+      "sr_no": 22,
+      "gri_topic": "Employment Practices",
+      "underlying_standard": "GRI 202: Market Presence 2016 + GRI 401: Employment 2016 + GRI 402: Labor and Management Relations 2016 + GRI 404: Training and Education 2016 + GRI 414: Supplier Social Assessment 2016",
+      "coverage_rating": "Strong",
+      "pages": "204, 206, 207",
+      "disclosures": "202-1, 202-2, 401-1, 401-2, 401-3, 402-1, 404-1, 404-2, 404-3, 414-1, 414-2",
+      "reported": true,
+      "found_disclosures": [
+        "202-1",
+        "202-2",
+        "401-1",
+        "401-2",
+        "401-3",
+        "402-1",
+        "404-1",
+        "404-2",
+        "404-3",
+        "414-1",
+        "414-2"
+      ],
+      "expected_disclosures": [
+        "202-1",
+        "202-2",
+        "401-1",
+        "401-2",
+        "401-3",
+        "402-1",
+        "404-1",
+        "404-2",
+        "404-3",
+        "414-1",
+        "414-2"
+      ],
+      "coverage_pct": 100.0
+    },
+    {
+      "sr_no": 23,
+      "gri_topic": "Child Labour",
+      "underlying_standard": "GRI 408: Child Labor 2016 + GRI 414: Supplier Social Assessment 2016",
+      "coverage_rating": "Strong",
+      "pages": "206, 207",
+      "disclosures": "408-1, 414-1, 414-2",
+      "reported": true,
+      "found_disclosures": [
+        "408-1",
+        "414-1",
+        "414-2"
+      ],
+      "expected_disclosures": [
+        "408-1",
+        "414-1",
+        "414-2"
+      ],
+      "coverage_pct": 100.0
+    },
+    {
+      "sr_no": 24,
+      "gri_topic": "Forced Labour & Modern Slavery",
+      "underlying_standard": "GRI 409: Forced or Compulsory Labor 2016 + GRI 414: Supplier Social Assessment 2016",
+      "coverage_rating": "Strong",
+      "pages": "207",
+      "disclosures": "409-1, 414-1, 414-2",
+      "reported": true,
+      "found_disclosures": [
+        "409-1",
+        "414-1",
+        "414-2"
+      ],
+      "expected_disclosures": [
+        "409-1",
+        "414-1",
+        "414-2"
+      ],
+      "coverage_pct": 100.0
+    },
+    {
+      "sr_no": 25,
+      "gri_topic": "Freedom of Association",
+      "underlying_standard": "GRI 407: Freedom of Association and Collective Bargaining 2016",
+      "coverage_rating": "Strong",
+      "pages": "206",
+      "disclosures": "407-1",
+      "reported": true,
+      "found_disclosures": [
+        "407-1"
+      ],
+      "expected_disclosures": [
+        "407-1"
+      ],
+      "coverage_pct": 100.0
+    },
+    {
+      "sr_no": 26,
+      "gri_topic": "Non-discrimination & Equal Opportunity",
+      "underlying_standard": "GRI 202: Market Presence 2016 + GRI 405: Diversity and Equal Opportunity 2016 + GRI 406: Non-discrimination 2016",
+      "coverage_rating": "Strong",
+      "pages": "204, 206",
+      "disclosures": "202-1, 202-2, 405-1, 405-2, 406-1",
+      "reported": true,
+      "found_disclosures": [
+        "202-1",
+        "202-2",
+        "405-1",
+        "405-2",
+        "406-1"
+      ],
+      "expected_disclosures": [
+        "202-1",
+        "202-2",
+        "405-1",
+        "405-2",
+        "406-1"
+      ],
+      "coverage_pct": 100.0
+    },
+    {
+      "sr_no": 27,
+      "gri_topic": "Anti-corruption",
+      "underlying_standard": "GRI 205: Anti-corruption 2016",
+      "coverage_rating": "Strong",
+      "pages": "204",
+      "disclosures": "205-1, 205-2, 205-3",
+      "reported": true,
+      "found_disclosures": [
+        "205-1",
+        "205-2",
+        "205-3"
+      ],
+      "expected_disclosures": [
+        "205-1",
+        "205-2",
+        "205-3"
+      ],
+      "coverage_pct": 100.0
+    },
+    {
+      "sr_no": 28,
+      "gri_topic": "Public Policy",
+      "underlying_standard": "GRI 415: Public Policy 2016",
+      "coverage_rating": "Strong",
+      "pages": "207",
+      "disclosures": "415-1",
+      "reported": true,
+      "found_disclosures": [
+        "415-1"
+      ],
+      "expected_disclosures": [
+        "415-1"
+      ],
+      "coverage_pct": 100.0
+    },
+    {
+      "sr_no": 29,
+      "gri_topic": "Responsible Supply Chain",
+      "underlying_standard": "GRI 308: Supplier Environmental Assessment 2016 + GRI 414: Supplier Social Assessment 2016",
+      "coverage_rating": "Strong",
+      "pages": "206, 207",
+      "disclosures": "308-1, 308-2, 414-1, 414-2",
+      "reported": true,
+      "found_disclosures": [
+        "308-1",
+        "308-2",
+        "414-1",
+        "414-2"
+      ],
+      "expected_disclosures": [
+        "308-1",
+        "308-2",
+        "414-1",
+        "414-2"
+      ],
+      "coverage_pct": 100.0
+    },
+    {
+      "sr_no": 30,
+      "gri_topic": "Product Safety & Quality",
+      "underlying_standard": "GRI 416: Customer Health and Safety 2016",
+      "coverage_rating": "Strong",
+      "pages": "207",
+      "disclosures": "416-1, 416-2",
+      "reported": true,
+      "found_disclosures": [
+        "416-1",
+        "416-2"
+      ],
+      "expected_disclosures": [
+        "416-1",
+        "416-2"
+      ],
+      "coverage_pct": 100.0
+    },
+    {
+      "sr_no": 31,
+      "gri_topic": "Marketing and Labeling",
+      "underlying_standard": "GRI 417: Marketing and Labeling 2016",
+      "coverage_rating": "Strong",
+      "pages": "207",
+      "disclosures": "417-1, 417-2, 417-3",
+      "reported": true,
+      "found_disclosures": [
+        "417-1",
+        "417-2",
+        "417-3"
+      ],
+      "expected_disclosures": [
+        "417-1",
+        "417-2",
+        "417-3"
+      ],
+      "coverage_pct": 100.0
+    },
+    {
+      "sr_no": 32,
+      "gri_topic": "Data Privacy & Cybersecurity",
+      "underlying_standard": "GRI 418: Customer Privacy 2016",
+      "coverage_rating": "Strong",
+      "pages": "207",
+      "disclosures": "418-1",
+      "reported": true,
+      "found_disclosures": [
+        "418-1"
+      ],
+      "expected_disclosures": [
+        "418-1"
+      ],
+      "coverage_pct": 100.0
+    },
+    {
+      "sr_no": 33,
+      "gri_topic": "Food Security",
+      "underlying_standard": "No GRI Standard",
+      "coverage_rating": "N/A",
+      "pages": "N/A",
+      "disclosures": "N/A",
+      "reported": false,
+      "found_disclosures": [],
+      "expected_disclosures": [],
+      "coverage_pct": 0
+    },
+    {
+      "sr_no": 34,
+      "gri_topic": "Animal Welfare",
+      "underlying_standard": "No GRI Standard",
+      "coverage_rating": "N/A",
+      "pages": "N/A",
+      "disclosures": "N/A",
+      "reported": false,
+      "found_disclosures": [],
+      "expected_disclosures": [],
+      "coverage_pct": 0
+    },
+    {
+      "sr_no": 35,
+      "gri_topic": "Pesticides and Agrochemicals",
+      "underlying_standard": "No GRI Standard",
+      "coverage_rating": "N/A",
+      "pages": "N/A",
+      "disclosures": "N/A",
+      "reported": false,
+      "found_disclosures": [],
+      "expected_disclosures": [],
+      "coverage_pct": 0
+    },
+    {
+      "sr_no": 36,
+      "gri_topic": "Fishing and Aquaculture Practices",
+      "underlying_standard": "No GRI Standard",
+      "coverage_rating": "N/A",
+      "pages": "N/A",
+      "disclosures": "N/A",
+      "reported": false,
+      "found_disclosures": [],
+      "expected_disclosures": [],
+      "coverage_pct": 0
+    },
+    {
+      "sr_no": 37,
+      "gri_topic": "Corporate Governance",
+      "underlying_standard": "GRI 2: General Disclosures 2021",
+      "coverage_rating": "Strong",
+      "pages": "203, 204, 205, 206",
+      "disclosures": "2-1, 2-10, 2-11, 2-12, 2-13, 2-14, 2-15, 2-16, 2-17, 2-18, 2-19, 2-2, 2-20, 2-21, 2-22, 2-23, 2-24, 2-25, 2-26, 2-27, 2-28, 2-29, 2-3, 2-30, 2-4, 2-5, 2-6, 2-7, 2-8, 2-9",
+      "reported": true,
+      "found_disclosures": [
+        "2-1",
+        "2-2",
+        "2-3",
+        "2-4",
+        "2-5",
+        "2-6",
+        "2-7",
+        "2-8",
+        "2-9",
+        "2-10",
+        "2-11",
+        "2-12",
+        "2-13",
+        "2-14",
+        "2-15",
+        "2-16",
+        "2-17",
+        "2-18",
+        "2-19",
+        "2-20",
+        "2-21",
+        "2-22",
+        "2-23",
+        "2-24",
+        "2-25",
+        "2-26",
+        "2-27",
+        "2-28",
+        "2-29",
+        "2-30"
+      ],
+      "expected_disclosures": [
+        "2-1",
+        "2-2",
+        "2-3",
+        "2-4",
+        "2-5",
+        "2-6",
+        "2-7",
+        "2-8",
+        "2-9",
+        "2-10",
+        "2-11",
+        "2-12",
+        "2-13",
+        "2-14",
+        "2-15",
+        "2-16",
+        "2-17",
+        "2-18",
+        "2-19",
+        "2-20",
+        "2-21",
+        "2-22",
+        "2-23",
+        "2-24",
+        "2-25",
+        "2-26",
+        "2-27",
+        "2-28",
+        "2-29",
+        "2-30"
+      ],
+      "coverage_pct": 100.0
+    }
+  ]
+}

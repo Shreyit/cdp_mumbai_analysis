@@ -1,0 +1,30 @@
+{
+  "standard_id": "GRI 409",
+  "name": "Forced or Compulsory Labor",
+  "version": "2016",
+  "effective_date": "2018-07-01",
+  "category": "topic",
+  "pillar": "social",
+  "sector_applicability": [
+    "all"
+  ],
+  "page_count": 13,
+  "source_file": "GRI 409_ Forced or Compulsory Labor 2016.pdf",
+  "purpose": "GRI 409: Forced or Compulsory Labor 2016 contains disclosures for organizations to report information about their impacts related to forced or compulsory labor, and how they manage these impacts. The Standard is structured as follows: • Section 1 contains a requirement, which provides information about how the organization manages its impacts related to forced or compulsory labor. • Section 2 contains one disclosure, which provides information about the organization’s impacts related to forced o",
+  "disclosures": [
+    {
+      "code": "409-1",
+      "title": "Operations and suppliers at significant risk for incidents of forced",
+      "type": "qualitative",
+      "requirements": [],
+      "guidance": "",
+      "related_sdgs": []
+    }
+  ],
+  "management_approach": {
+    "code": "3-3",
+    "applies": true
+  },
+  "indexed_at": "2026-07-21T11:12:30",
+  "raw_text_length": 25262
+}

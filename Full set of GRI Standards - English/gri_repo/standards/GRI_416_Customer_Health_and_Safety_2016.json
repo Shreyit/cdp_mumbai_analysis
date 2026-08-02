@@ -1,0 +1,38 @@
+{
+  "standard_id": "GRI 416",
+  "name": "Customer Health and Safety",
+  "version": "2016",
+  "effective_date": "2018-07-01",
+  "category": "topic",
+  "pillar": "social",
+  "sector_applicability": [
+    "all"
+  ],
+  "page_count": 12,
+  "source_file": "GRI 416_ Customer Health and Safety 2016.pdf",
+  "purpose": "GRI 416: Customer Health and Safety 2016 contains disclosures for organizations to report information about their impacts related to customer health and safety, and how they manage these impacts. The Standard is structured as follows: • Section 1 contains a requirement, which provides information about how the organization manages its impacts related to customer health and safety. • Section 2 contains two disclosures, which provide information about the organization’s impacts related to customer",
+  "disclosures": [
+    {
+      "code": "416-1",
+      "title": "Assessment of the health and safety impacts of product and",
+      "type": "qualitative",
+      "requirements": [],
+      "guidance": "",
+      "related_sdgs": []
+    },
+    {
+      "code": "416-2",
+      "title": "Incidents of non-compliance concerning the health and safety",
+      "type": "qualitative",
+      "requirements": [],
+      "guidance": "",
+      "related_sdgs": []
+    }
+  ],
+  "management_approach": {
+    "code": "3-3",
+    "applies": true
+  },
+  "indexed_at": "2026-07-21T11:12:34",
+  "raw_text_length": 16878
+}
