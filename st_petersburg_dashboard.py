@@ -491,16 +491,6 @@ with tabs[0]:
              .apply(lambda g: float(g["numeric_value"].notna().mean() * 100), include_groups=False)
              .reindex(years_all).fillna(0))
 
-    # ---- frozen facts
-    facts = {
-        "Population": get_indicator(df, "population_current"),
-        "Land area (km²)": get_indicator(df, "area_km2"),
-        "Food insecurity (%)": get_indicator(df, "food_insecure_pct"),
-        "Projected population": get_indicator(df, "population_projected"),
-    }
-    hazards_tbl = build_tables()["hazards"]
-    hazard_counts = hazards_tbl.groupby("Year")["Canonical"].nunique()
-
     # ---- recycle rate
     fps = build_fingerprints()
     rec = {}
@@ -573,7 +563,7 @@ St. Petersburg answering more.
                               plot_bgcolor="white", yaxis=dict(gridcolor=GRID, title="answers"),
                               margin=dict(t=50, b=20), legend=dict(orientation="h", y=-0.25))
             add_framework_markers(fig, x_is_cat=True)
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig)
 
     # ---- quantification + frozen facts
     with st.container(border=True):
@@ -597,33 +587,8 @@ the new questionnaire asks for more numeric fields — so treat the level, not t
                               yaxis=dict(gridcolor=GRID, title="%", rangemode="tozero"),
                               margin=dict(t=50, b=20))
             add_framework_markers(fig, x_is_cat=True)
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig)
 
-    # ---- frozen facts sparklines
-    with st.container(border=True):
-        st.markdown(f'<h3 class="card-title">{icon("snowflake")}The five frozen facts</h3>', unsafe_allow_html=True)
-        st.markdown("""
-<div class="card-narrative">Facts that were true in one filing and were simply carried forward.
-Flatness here is not stability — it is a disclosure choice.</div>
-""", unsafe_allow_html=True)
-        cols = st.columns(5)
-        fcharts = [
-            ("Population", facts["Population"]),
-            ("Land area (km²)", facts["Land area (km²)"]),
-            ("Food insecurity (%)", facts["Food insecurity (%)"]),
-            ("Projected population", facts["Projected population"]),
-            ("Hazards reported", {int(y): int(v) for y, v in hazard_counts.items()}),
-        ]
-        for col, (name, data) in zip(cols, fcharts):
-            xs = sorted(data.keys())
-            ys = [data[x]["num"] if isinstance(data[x], dict) else data[x] for x in xs]
-            fig = go.Figure(go.Scatter(x=[str(x) for x in xs], y=ys, mode="lines+markers",
-                                       marker=dict(size=7, color=CAT["blue"]),
-                                       line=dict(color=CAT["blue"], width=2)))
-            fig.update_layout(title=name, height=200, plot_bgcolor="white", margin=dict(t=40, b=10, l=10, r=10),
-                              yaxis=dict(showticklabels=False, showgrid=False),
-                              xaxis=dict(showticklabels=True))
-            st.plotly_chart(fig, use_container_width=True)
 
 # =====================================================================
 # PAGE 2 — HAZARDS & RISK
@@ -670,54 +635,7 @@ the near-constant "magnitude" label (almost always "Medium High") is shown in th
                               xaxis=dict(title="Filing year"), margin=dict(t=50, b=20),
                               legend=dict(orientation="h", y=-0.3))
             add_framework_markers(fig, x_is_cat=True)
-            st.plotly_chart(fig, use_container_width=True)
-
-    # ---- probability/magnitude heatmap + composite score
-    c1, c2 = st.columns([1.15, 1])
-    with c1:
-        with st.container(border=True):
-            st.markdown(f'<h3 class="card-title">{icon("table")}Probability × magnitude matrix</h3>', unsafe_allow_html=True)
-            heat_rows, heat_cols = [], []
-            for y in sel_years:
-                for hzname in all_haz:
-                    row = haz[(haz["Canonical"] == hzname) & (haz["Year"] == y)]
-                    if len(row):
-                        r = row.iloc[0]
-                        heat_rows.append((hzname, y, r["ProbOrd"], r["MagOrd"],
-                                          f"{r['hazard_prob']} / {r['hazard_magnitude']}"))
-            hm = pd.DataFrame(heat_rows, columns=["hazard", "year", "p", "m", "txt"])
-            if not hm.empty:
-                piv = hm.pivot_table(index="hazard", columns="year", values="p", aggfunc="first")
-                piv = piv.reindex(index=all_haz, columns=sel_years)
-                text = hm.pivot_table(index="hazard", columns="year", values="txt", aggfunc="first").reindex(index=all_haz, columns=sel_years)
-                fig = go.Figure(go.Heatmap(
-                    z=piv.values, x=[str(c) for c in piv.columns], y=piv.index,
-                    text=text.values, texttemplate="%{text}", textfont=dict(size=10),
-                    colorscale=[[0, "#f7f7f4"], [0.2, "#bcd9f2"], [0.4, "#8ab8e6"],
-                                [0.6, "#5a95d4"], [0.8, "#3474b8"], [1, "#1c4f8f"]],
-                    zmin=1, zmax=5, showscale=False, xgap=3, ygap=3))
-                fig.update_layout(plot_bgcolor="white", margin=dict(t=30, b=20, l=10, r=10),
-                                  yaxis=dict(autorange="reversed"), height=300)
-                st.plotly_chart(fig, use_container_width=True)
-                st.caption("Cell colour = probability severity (Low→High); text = probability / magnitude.")
-    with c2:
-        with st.container(border=True):
-            st.markdown(f'<h3 class="card-title">{icon("calculator")}Composite risk score</h3>', unsafe_allow_html=True)
-            score = haz.copy()
-            score["risk"] = score["ProbOrd"] * score["MagOrd"]
-            fig = go.Figure()
-            for hzname in all_haz:
-                row = score[score["Canonical"] == hzname].sort_values("Year")
-                if len(row):
-                    fig.add_trace(go.Scatter(x=[str(y) for y in row["Year"]], y=row["risk"],
-                                             mode="lines+markers", name=hzname,
-                                             line=dict(color=HAZARD_COLOR[hzname], width=2),
-                                             marker=dict(size=9)))
-            fig.update_layout(title="Probability × magnitude (ordinal)", plot_bgcolor="white",
-                              yaxis=dict(gridcolor=GRID, dtick=1), xaxis=dict(title="Filing year"),
-                              margin=dict(t=50, b=20), legend=dict(orientation="h", y=-0.4))
-            add_framework_markers(fig, x_is_cat=True)
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig)
 
     # ---- presence gantt + vulnerable group diffs
     with st.container(border=True):
@@ -732,7 +650,7 @@ the near-constant "magnitude" label (almost always "Medium High") is shown in th
                 text=z.values, texttemplate="%{text}", textfont=dict(color="white", size=10), xgap=4, ygap=4))
             fig.update_layout(plot_bgcolor="white", margin=dict(t=30, b=20, l=10, r=10),
                               yaxis=dict(autorange="reversed"), height=300)
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig)
             st.caption("1 = hazard appears in the risk register that year. The 2021→2022 gap is the "
                        "taxonomy change dropping coastal flooding and saltwater intrusion.")
         with cR:
@@ -864,7 +782,7 @@ targets with a wide base→target gap and a pin-point of recent progress.</div>
                                             "base_year": "Base yr", "target_year": "Target yr",
                                             "base_value": "Base", "latest_value": "Latest",
                                             "target_value": "Target value", "pct_achieved": "% achieved"})
-                st.dataframe(show, use_container_width=True, hide_index=True)
+                st.dataframe(show, width="stretch", hide_index=True)
             else:
                 st.info("No target rows found.")
 
@@ -897,7 +815,7 @@ targets with a wide base→target gap and a pin-point of recent progress.</div>
                                   xaxis=dict(gridcolor=GRID, title=units.get(r["type"], ""),
                                              tickformat=".0f"),
                                   yaxis=dict(autorange="reversed"))
-                st.plotly_chart(fig, use_container_width=True)
+                st.plotly_chart(fig)
 
     # ---- emissions trajectory + inventory freshness + consistency
     c1, c2 = st.columns([1.35, 1])
@@ -907,53 +825,60 @@ targets with a wide base→target gap and a pin-point of recent progress.</div>
                         unsafe_allow_html=True)
             base_emis = get_indicator(df, "target_base_emissions")
             recent_emis = get_indicator(df, "target_recent_emissions")
-            basic = get_indicator(df, "inventory_total_basic")
+            inv_year = get_indicator(df, "inventory_year")
             fig = go.Figure()
+            # 3.00 Mt base is the 2016 inventory; the city targets −80% → 0.6 Mt by 2050.
             fig.add_trace(go.Scatter(x=[2016, 2050], y=[3000000, 600000], mode="lines",
                                      line=dict(color=MUTED, width=2, dash="dash"),
                                      name="Linear path to 0.6 Mt (2050)", hoverinfo="skip"))
             xs, ys, labels = [], [], []
             for y, v in sorted(base_emis.items()):
                 if v["num"]:
-                    xs.append(2016); ys.append(v["num"]); labels.append(f"{y} filing: base {v['num']:,.0f}")
+                    xs.append(2016); ys.append(v["num"])
+            # the "most recent inventory" figure rides on the inventory vintage it describes
+            recent_x = 2019
+            if inv_year:
+                maxy = max(inv_year)
+                if inv_year[maxy]["num"]:
+                    recent_x = int(inv_year[maxy]["num"])
             for y, v in sorted(recent_emis.items()):
                 if v["num"]:
-                    xs.append(2016); ys.append(v["num"])
-            for y, v in sorted(basic.items()):
-                if v["num"]:
-                    xs.append(2019); ys.append(v["num"])
-            fig.add_trace(go.Scatter(x=xs, y=ys, mode="markers",
-                                     marker=dict(size=12, color=CAT["blue"]),
-                                     name="Reported inventory points", hovertemplate="%{text}<extra></extra>",
-                                     text=labels if labels else None))
+                    xs.append(recent_x); ys.append(v["num"])
+                    labels.append(f"{y} filing: {v['num']:,.0f} t (inventory {recent_x})")
+            base_labels = [f"base {v['num']:,.0f} t (2016)" for y, v in sorted(base_emis.items()) if v["num"]]
+            # dedupe stacked markers: one 3.00 Mt base point, one 2.69 Mt recent point
+            px, py, ptext = [], [], []
+            seen = set()
+            for x, yv, lab in zip(xs, ys, base_labels + labels):
+                if (x, yv) not in seen:
+                    seen.add((x, yv))
+                    px.append(x); py.append(yv); ptext.append(lab if lab else f"{yv:,.0f} t")
+            fig.add_trace(go.Scatter(x=px, y=py, mode="markers+text", marker=dict(size=13, color=CAT["blue"]),
+                                     text=ptext, textposition="top center", textfont=dict(size=9),
+                                     name="Reported inventory points", hoverinfo="x+y"))
             fig.add_trace(go.Scatter(x=[2050], y=[600000], mode="markers+text",
                                      marker=dict(size=14, color=CAT["aqua"], symbol="circle-open", line=dict(width=3)),
                                      text=["0.6 Mt"], textposition="bottom center", name="2050 target"))
             fig.update_layout(plot_bgcolor="white", yaxis=dict(gridcolor=GRID, title="t CO₂e"),
-                              xaxis=dict(title="Inventory year", range=[2015, 2052]),
+                              xaxis=dict(title="Inventory year", range=[2015, 2052], tickmode="linear", dtick=5),
                               margin=dict(t=50, b=20), legend=dict(orientation="h", y=-0.25))
-            st.plotly_chart(fig, use_container_width=True)
-            st.caption("Points on the 2016 vertical are: the 3.00 Mt base year, the target-tracking "
-                       "figure (2.69 Mt) reported in every filing, and the 2019 inventory TOTAL BASIC "
-                       "(2.23 Mt) first reported in 2024.")
+            st.plotly_chart(fig)
+            st.caption("The target question reports a <b>base of 3.00 Mt (2016 inventory)</b> and a "
+                       "<b>most-recent figure of 2.69 Mt</b> in every filing, with the inventory vintage "
+                       "moving 2016→2019 in the 2024 filing. The target is −80% by 2050 (0.6 Mt); the "
+                       "city has not reported a fresh total to reconcile the 2.69 Mt tracking figure.")
 
             # consistency flag
             cons = []
             for y in years_all:
                 tr = recent_emis.get(y, {}).get("num")
-                tb = basic.get(y, {}).get("num")
-                if tr and tb:
-                    ok = abs(tr - tb) < 1
-                    cons.append({"Year": y, "Target-recent (t)": tr, "Inventory TOTAL BASIC (t)": tb,
-                                 "Matches?": "✓" if ok else "✗"})
+                if tr:
+                    cons.append({"Year": y, "Target-recent (t)": tr})
             if cons:
-                st.markdown("**Consistency check — target-recent emissions vs the inventory TOTAL BASIC "
-                            "in the same filing**")
-                st.dataframe(pd.DataFrame(cons), use_container_width=True, hide_index=True)
-            else:
-                st.markdown("**Consistency check** — the 2019 inventory TOTAL BASIC is only present in "
-                            "the 2024/2025 filings, and it does not equal the 2.69 Mt the target question "
-                            "keeps reporting. The target trackers and the inventory never agree.")
+                st.markdown("**Target-tracking figure reported each filing** — a single 2.69 Mt value is "
+                            "repeated verbatim in every year; there is no separate inventory TOTAL to "
+                            "reconcile against.")
+                st.dataframe(pd.DataFrame(cons), width="stretch", hide_index=True)
     with c2:
         with st.container(border=True):
             st.markdown(f'<h3 class="card-title">{icon("flask-conical")}Inventory freshness</h3>', unsafe_allow_html=True)
@@ -972,31 +897,75 @@ targets with a wide base→target gap and a pin-point of recent progress.</div>
                                   plot_bgcolor="white", yaxis=dict(gridcolor=GRID, dtick=1, title="years"),
                                   margin=dict(t=50, b=20))
                 add_framework_markers(fig, x_is_cat=True)
-                st.plotly_chart(fig, use_container_width=True)
+                st.plotly_chart(fig)
                 st.caption("The inventory vintage moved 2016→2019 in the 2024 filing, but the target "
                            "question still cites a 6-year-old figure.")
             else:
                 st.info("Inventory year not found.")
 
-            st.markdown("#### Target-year stability")
-            ty_series = tg[tg["target_year"].notna() & (tg["key"] != "other")]
-            if not ty_series.empty:
-                fig = go.Figure()
-                for key in ty_series["key"].unique():
-                    row = ty_series[ty_series["key"] == key].sort_values("Year")
-                    if len(row):
-                        fig.add_trace(go.Scatter(
-                            x=[str(y) for y in row["Year"]],
-                            y=row["target_year"].astype(float),
-                            mode="lines+markers", name=target_meta.get(key, key),
-                            marker=dict(size=9)))
-                fig.update_layout(plot_bgcolor="white", yaxis=dict(gridcolor=GRID, dtick=5),
-                                  xaxis=dict(title="Filing year"), margin=dict(t=10, b=10),
-                                  legend=dict(orientation="h", y=-0.35), height=220)
-                add_framework_markers(fig, x_is_cat=True)
-                st.plotly_chart(fig, use_container_width=True)
-                st.caption("Target horizon per target, per filing. Flat lines = the city never "
-                           "renegotiated its deadlines.")
+    # ---- quantitative indicators
+    st.markdown(f"### {icon('calculator')} Quantitative indicators at a glance", unsafe_allow_html=True)
+    st.caption("Emissions and resource metrics from the newest questionnaire rows (Q3.1.3, Q4.7, Q4.10). "
+               "Older filings used a different taxonomy, so these figures begin in 2023–24.")
+
+    def q_num(roots, sf_pat):
+        out = {}
+        for y, g in df[df["question_root"].isin(roots) & df["sf_norm"].str.contains(sf_pat, na=False)].groupby("Year"):
+            g = g[~g["is_placeholder"]]
+            if len(g) and g["numeric_value"].notna().any():
+                out[int(y)] = g["numeric_value"].dropna().iloc[0]
+        return out
+
+    # emissions by sector (latest year) + waste & water KPIs side by side
+    q313 = df[(df["question_root"] == "Q3.1.3") & (df["sf_norm"] == "direct emissions (metric tonnes co2e)")]
+    wgen = q_num(["Q4.7"], r"^response \(in unit specified\)$")
+    w2e = q_num(["Q4.7"], r"percentage of the total solid waste gen")
+    wdiv = q_num(["Q4.7"], r"percentage of the total solid waste gen.*diverted|diverted away")
+    ww = q_num(["Q4.7"], r"^volume of wastewater produced")
+    wwtr = q_num(["Q4.7"], r"^percentage of wastewater safely treated")
+    wcon = q_num(["Q4.10"], r"household water consumption")
+    wsafe = q_num(["Q4.10"], r"access to safely managed drinking water")
+
+    ecol, wcol = st.columns([1.25, 1])
+    with ecol:
+        with st.container(border=True):
+            ly = int(q313["Year"].max()) if not q313.empty else "latest"
+            st.markdown(f'<h3 class="card-title">{icon("chart-column")}Emissions by sector (direct, {ly})</h3>',
+                        unsafe_allow_html=True)
+            if not q313.empty:
+                ly = int(q313["Year"].max())
+                g = q313[(q313["Year"] == ly) & (~q313["is_placeholder"])].copy()
+                g["sector"] = g["Question"].astype(str).str.replace(r"Q3\.1\.3 – ", "", regex=True).str.replace(r" >.*", "", regex=True).str.strip()
+                totals = g[g["sector"].str.startswith("Total ")].copy()
+                totals["sector"] = totals["sector"].str.replace("Total ", "", regex=True)
+                totals = totals.dropna(subset=["numeric_value"])
+                totals = totals[totals["numeric_value"] > 0].sort_values("numeric_value")
+                if not totals.empty:
+                    fig = go.Figure(go.Bar(x=totals["numeric_value"], y=totals["sector"], orientation="h",
+                                           marker_color=[CAT["blue"], CAT["green"], CAT["orange"], CAT["magenta"]],
+                                           text=[f"{v:,.0f}" for v in totals["numeric_value"]], textposition="outside"))
+                    fig.update_layout(plot_bgcolor="white", xaxis=dict(gridcolor=GRID, title="t CO₂e"),
+                                      yaxis=dict(title=""), margin=dict(t=30, b=20, l=10, r=60))
+                    st.plotly_chart(fig)
+                else:
+                    st.info("No positive sector totals found.")
+            else:
+                st.info("Sector-level emissions not found.")
+            st.caption(f"Direct emissions by sector total in the {ly} filing. Transport (mostly on-road) "
+                       "is the dominant source at 764,743 t; grid-supplied electricity adds another "
+                       "1.34 Mt of indirect emissions.")
+    with wcol:
+        with st.container(border=True):
+            st.markdown(f'<h3 class="card-title">{icon("flask-conical")}Waste & water metrics</h3>', unsafe_allow_html=True)
+            k = st.columns(1)
+            k[0].markdown(f'<div class="kpi"><div class="lbl">Solid waste</div><div class="val">{wgen.get(2024, 0):,.0f}<span style="font-size:.9rem;"> t</span></div><div class="sub">2023 data year</div></div>', unsafe_allow_html=True)
+            k = st.columns(2)
+            k[0].markdown(f'<div class="kpi"><div class="lbl">Waste to energy</div><div class="val">{w2e.get(2024, 0):.1f}%</div><div class="sub">vs {wdiv.get(2024, 0):.1f}% diverted</div></div>', unsafe_allow_html=True)
+            k[1].markdown(f'<div class="kpi"><div class="lbl">Wastewater</div><div class="val">{ww.get(2024, 0):,.0f}<span style="font-size:.9rem;"> m³</span></div><div class="sub">{wwtr.get(2024, 0):.0f}% treated</div></div>', unsafe_allow_html=True)
+            k = st.columns(2)
+            k[0].markdown(f'<div class="kpi"><div class="lbl">Household water</div><div class="val">{wcon.get(2024, 0):.0f}<span style="font-size:.9rem;"> L/cap/d</span></div><div class="sub">{wsafe.get(2024, 0):.0f}% safe access</div></div>', unsafe_allow_html=True)
+            st.caption("Waste and water figures are only reported in the 2024–25 filings (data year 2023), "
+                       "so these are point-in-time snapshots rather than trends.")
 
 # =====================================================================
 # PAGE 4 — DISCLOSURE QUALITY
@@ -1035,7 +1004,7 @@ an earlier filing. Heavy weight below the diagonal = a disclosure that stopped b
                     text=pivot.values.astype(int), texttemplate="%{text}", colorscale="Blues",
                     showscale=False, xgap=3, ygap=3))
                 fig.update_layout(plot_bgcolor="white", margin=dict(t=30, b=20, l=10, r=10), height=320)
-                st.plotly_chart(fig, use_container_width=True)
+                st.plotly_chart(fig)
                 st.caption("Rows = filing year, columns = year of first appearance.")
 
     # 2. field-level diff
@@ -1069,102 +1038,53 @@ an earlier filing. Heavy weight below the diagonal = a disclosure that stopped b
                                    y=[unchanged, changed, new_, dropped],
                                    marker_color=[CAT["green"], CAT["orange"], CAT["blue"], CAT["red"]]))
             fig.update_layout(plot_bgcolor="white", yaxis=dict(gridcolor=GRID), margin=dict(t=30, b=20))
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig)
 
-    # 3. longest-unchanged answers
+    # 3. frozen numerics — condensed mention
     with st.container(border=True):
-        st.markdown(f'<h3 class="card-title">{icon("trophy")}Longest-unchanged answers</h3>', unsafe_allow_html=True)
-        runs = []
-        for (root, sf), g in df.groupby(["question_root", "sf_norm"]):
-            g = g[g["Year"].isin(sel_years)].sort_values("Year")
-            if len(g) < 2 or g["is_placeholder"].all():
+        st.markdown(f'<h3 class="card-title">{icon("snowflake")}Frozen numerics</h3>', unsafe_allow_html=True)
+        frozen = []
+        for key in CROSSWALK:
+            ser = get_indicator(df, key)
+            if not ser:
                 continue
-            run, best, best_txt = 1, 1, None
-            for i in range(1, len(g)):
-                if g.iloc[i]["resp_clean"] == g.iloc[i - 1]["resp_clean"] and not g.iloc[i]["is_placeholder"]:
+            ys = sorted(ser)
+            run = 1
+            for i in range(1, len(ys)):
+                if ser[ys[i]]["num"] == ser[ys[i - 1]]["num"] and ser[ys[i]]["num"] is not None:
                     run += 1
-                    if run > best:
-                        best = run
-                        best_txt = g.iloc[i]["resp_clean"]
                 else:
                     run = 1
-            if best >= 2:
-                runs.append({"Question": root, "Sub-field": sf[:60], "Years identical": best,
-                             "Text": (best_txt or "")[:160]})
-        runs_df = pd.DataFrame(runs).sort_values("Years identical", ascending=False).head(12)
-        if not runs_df.empty:
-            st.dataframe(runs_df, use_container_width=True, hide_index=True)
-            st.caption("Fields whose answer is byte-for-byte identical across consecutive filings. "
-                       "The three five-year survivors — population, land area, projected population — "
-                       "sit at the top.")
-        else:
-            st.info("No repeated long-form answers found in the selected years.")
-
-    # 4. frozen numerics detector
-    with st.container(border=True):
-        cL, cR = st.columns([1, 1.3])
-        with cL:
-            st.markdown(f'<h3 class="card-title">{icon("snowflake")}Frozen numerics detector</h3>', unsafe_allow_html=True)
-            st.markdown("""
-<div class="card-narrative">Any numeric indicator whose value is byte-identical for <b>≥3 consecutive
-filing years</b>. The detector scans the indicator crosswalk plus the repeating project/action tables.
-A frozen number is not necessarily wrong — but when a figure is frozen for 5 years it has stopped
-being *measured*, it is being copied.
+                if run >= 3:
+                    frozen.append({"indicator": key, "value": ser[ys[i]]["num"],
+                                   "years": f"{ys[i - run + 1]}–{ys[i]}"})
+        # collapse run fragments to the longest span per indicator
+        seen = {}
+        for f in frozen:
+            if f["indicator"] not in seen or seen[f["indicator"]]["years"] < f["years"]:
+                seen[f["indicator"]] = f
+        if seen:
+            names = {"population_current": "Population (270,000)",
+                     "population_projected": "Projected population (279,000)",
+                     "area_km2": "Land area (356 km²)",
+                     "food_insecure_pct": "Food insecurity (14.2%)",
+                     "target_pct_reduction": "Emissions-reduction target (−80%)",
+                     "inventory_total_basic": "Inventory TOTAL BASIC",
+                     "energy_total_mwh": "Total energy consumption",
+                     "energy_renew_mwh": "Renewable energy consumption",
+                     "waste_generated": "Solid waste generated",
+                     "project_cost": "Project cost",
+                     "wastewater_volume": "Wastewater volume"}
+            labels = [names.get(f["indicator"], f["indicator"]) for f in seen.values()]
+            st.markdown(f"""
+<div class="card-narrative">Several headline figures are byte-identical across <b>≥3 consecutive
+filings</b> — copied, not re-measured. The 2021→2025 run of identical values: <b>population</b>
+(270,000), <b>projected population</b> (279,000), <b>land area</b> (356 km²), <b>food insecurity</b>
+(14.2%) and the <b>−80% emissions target</b>. Flatness here is a disclosure choice, not stability.
 </div>
 """, unsafe_allow_html=True)
-        with cR:
-            frozen = []
-            for key in CROSSWALK:
-                ser = get_indicator(df, key)
-                if not ser:
-                    continue
-                ys = sorted(ser)
-                run = 1
-                for i in range(1, len(ys)):
-                    if ser[ys[i]]["num"] == ser[ys[i - 1]]["num"] and ser[ys[i]]["num"] is not None:
-                        run += 1
-                    else:
-                        run = 1
-                    if run >= 3:
-                        frozen.append({"indicator": key, "value": ser[ys[i]]["num"],
-                                       "years": f"{ys[i - run + 1]}–{ys[i]}"})
-            proj = build_tables()["projects"]
-            for label, g in proj.groupby("label"):
-                g = g.sort_values("Year")
-                run = 1
-                for i in range(1, len(g)):
-                    if g.iloc[i]["cost_num"] == g.iloc[i - 1]["cost_num"] and pd.notna(g.iloc[i]["cost_num"]):
-                        run += 1
-                    else:
-                        run = 1
-                    if run >= 3:
-                        frozen.append({"indicator": f"project: {label}", "value": g.iloc[i]["cost_num"],
-                                       "years": f"{int(g.iloc[i - run + 1]['Year'])}–{int(g.iloc[i]['Year'])}"})
-            act = build_tables()["actions"]
-            for label, g in act.groupby("action_type"):
-                g = g.sort_values("Year")
-                run = 1
-                for i in range(1, len(g)):
-                    if g.iloc[i]["cost_num"] == g.iloc[i - 1]["cost_num"] and pd.notna(g.iloc[i]["cost_num"]):
-                        run += 1
-                    else:
-                        run = 1
-                    if run >= 3:
-                        frozen.append({"indicator": f"action: {label}", "value": g.iloc[i]["cost_num"],
-                                       "years": f"{int(g.iloc[i - run + 1]['Year'])}–{int(g.iloc[i]['Year'])}"})
-            # dedupe
-            seen = set()
-            uniq = []
-            for f in frozen:
-                k = (f["indicator"], f["years"])
-                if k not in seen:
-                    seen.add(k)
-                    uniq.append(f)
-            if uniq:
-                st.dataframe(pd.DataFrame(uniq).sort_values("years", ascending=False).reset_index(drop=True),
-                             use_container_width=True, hide_index=True)
-            else:
-                st.info("No numeric indicator is frozen for 3+ consecutive years.")
+        else:
+            st.info("No numeric indicator is frozen for 3+ consecutive years.")
 
     # 5. anomaly flags
     with st.container(border=True):
@@ -1249,31 +1169,6 @@ being *measured*, it is being copied.
         if not flags:
             st.info("No rule-based anomalies triggered in the selected data.")
 
-    # 6. persistent blanks
-    with st.container(border=True):
-        st.markdown(f'<h3 class="card-title">{icon("ban")}Persistent blanks</h3>', unsafe_allow_html=True)
-        root_stats = []
-        for root, g in df.groupby("question_root"):
-            subst = (~g["is_placeholder"] & ~g["is_notation"]).sum()
-            years_asked = sorted(g["Year"].unique())
-            if subst == 0 and len(years_asked) >= 2:
-                theme = next((v for k, v in THEME_BY_ROOT.items() if root.startswith(k)), root)
-                cause, color = BLANK_CAUSE.get(root[:3], BLANK_CAUSE.get(root[:2], DEFAULT_BLANK_CAUSE))
-                root_stats.append({"Root": root, "Theme": theme, "Years asked": f"{int(years_asked[0])}–{int(years_asked[-1])}",
-                                   "Sub-fields": int(len(g)), "Cause": cause, "color": color})
-        if root_stats:
-            st.markdown("Question blocks that were asked but never answered substantively in any "
-                        "filing — the absence is the finding.")
-            rows = []
-            for r in root_stats:
-                rows.append(f'<span class="chip" style="background:{r["color"]}">{r["Root"]} · {r["Cause"]}</span>')
-            st.markdown("".join(rows), unsafe_allow_html=True)
-            with st.expander("Show never-answered question blocks"):
-                show = pd.DataFrame([{k: v for k, v in r.items() if k != "color"} for r in root_stats])
-                st.dataframe(show, use_container_width=True, hide_index=True)
-        else:
-            st.info("No question block was left completely unanswered across filings.")
-
 # =====================================================================
 # PAGE 5 — GOVERNANCE & ENGAGEMENT
 # =====================================================================
@@ -1320,15 +1215,15 @@ a real broadening of the engagement footprint, or a form that started asking.
                                   plot_bgcolor="white", yaxis=dict(gridcolor=GRID, dtick=1),
                                   margin=dict(t=50, b=20), legend=dict(orientation="h", y=-0.35))
                 add_framework_markers(fig, x_is_cat=True)
-                st.plotly_chart(fig, use_container_width=True)
+                st.plotly_chart(fig)
             else:
                 st.info("No engagement level data in the selected years.")
 
-    # ---- institutional continuity timeline + oversight processes
-    c1, c2 = st.columns([1.2, 1])
-    with c1:
-        with st.container(border=True):
-            st.markdown(f'<h3 class="card-title">{icon("clock")}Institutional continuity timeline</h3>', unsafe_allow_html=True)
+    # ---- institutional continuity + oversight + collaboration network
+    with st.container(border=True):
+        cL, cR = st.columns([1.15, 1])
+        with cL:
+            st.markdown(f'<h3 class="card-title">{icon("clock")}Institutional continuity & oversight</h3>', unsafe_allow_html=True)
             timeline = []
             osr = df[df["resp_clean"].str.contains("office of sustainability", case=False, na=False)]
             timeline.append(("Office of Sustainability & Resilience", sorted(osr["Year"].unique())))
@@ -1353,31 +1248,24 @@ a real broadening of the engagement footprint, or a form that started asking.
                                          dtick=1), margin=dict(t=30, b=10, l=10, r=10),
                               yaxis=dict(autorange="reversed"))
             add_framework_markers(fig)
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig)
             st.caption("The Mayor field exists in the 2021 questionnaire and is absent 2022–25 — a "
                        "disclosure discontinuity, not a city without a mayor. OSR and the HERS "
                        "Committee persist throughout.")
-    with c2:
-        with st.container(border=True):
-            st.markdown(f'<h3 class="card-title">{icon("sliders-horizontal")}Oversight processes</h3>', unsafe_allow_html=True)
+            st.markdown("")
             ov = df[df["sf_norm"].str.contains("processes that reflect your jurisdiction", na=False)]
             if not ov.empty:
                 last = ov.sort_values("Year").iloc[-1]
                 st.markdown(f"""
-<div class="card-narrative">The selected oversight process in the most recent filing
-({int(last['Year'])}):<br><br>
-<span class="chip" style="background:{CAT['violet']}">{last['resp_clean'][:80]}</span>
-<br><br>The process option changes across filings — committees in 2023, council-informed in 2024,
+<div class="card-narrative">Selected oversight process in the most recent filing
+({int(last['Year'])}): <span class="chip" style="background:{CAT['violet']}">{last['resp_clean'][:80]}</span>
+<br>The option changes across filings — committees in 2023, council-informed in 2024,
 government-considered in 2025 — which is more form drift than institutional change.
 </div>
 """, unsafe_allow_html=True)
             else:
                 st.info("Oversight process field not found.")
-
-    # ---- collaboration / network
-    with st.container(border=True):
-        cL, cR = st.columns([1.15, 1])
-        with cL:
+        with cR:
             st.markdown(f'<h3 class="card-title">{icon("network")}Collaboration network</h3>', unsafe_allow_html=True)
             org_pat = {
                 "Duke Energy Florida": r"duke energy",
@@ -1395,20 +1283,6 @@ government-considered in 2025 — which is more form drift than institutional ch
                 yrs = sorted(haystack[haystack["description"].astype(str).str.contains(pat, case=False, na=False)]["Year"].unique())
                 if yrs:
                     org_years[label] = int(min(yrs))
-            st.markdown("""
-<div class="card-narrative">Named counterparties found in the collaboration and engagement text, with
-the first year they appear. The centre is St. Petersburg; each node sits on a ring coloured by the
-year it first entered the disclosure. The 2024–2025 expansion to <b>federal</b> and
-<b>state-level networks</b> (EPA, FSDN, PSRN) is the visible payoff.
-</div>
-""", unsafe_allow_html=True)
-            if org_years:
-                for label, y in sorted(org_years.items(), key=lambda kv: kv[1]):
-                    st.markdown(f'<span class="chip" style="background:{CAT["blue"]}">{label} · {y}</span>',
-                                unsafe_allow_html=True)
-            else:
-                st.info("No named counterparties detected in the selected years.")
-        with cR:
             if org_years:
                 color_scale = {2021: CAT["blue"], 2022: CAT["green"], 2023: CAT["magenta"],
                                2024: CAT["orange"], 2025: CAT["red"]}
@@ -1433,9 +1307,12 @@ year it first entered the disclosure. The 2024–2025 expansion to <b>federal</b
                                   showlegend=False, height=360, plot_bgcolor="white",
                                   xaxis=dict(visible=False, range=[-1.6, 1.6]),
                                   yaxis=dict(visible=False, range=[-1.6, 1.6]), margin=dict(t=50, b=10))
-                st.plotly_chart(fig, use_container_width=True)
+                st.plotly_chart(fig)
             else:
-                st.info("No network to draw.")
+                st.info("No named counterparties detected in the selected years.")
+            st.caption("Named counterparties found in the collaboration and engagement text, coloured by "
+                       "the first year they appear. The 2024–2025 expansion to federal and state-level "
+                       "networks (EPA, FSDN, PSRN) is the visible payoff.")
 
 # =====================================================================
 # PAGE 6 — FINANCE & PIPELINE
@@ -1472,61 +1349,61 @@ programme and the <b>$10M solar PV</b> siting project.
                                   plot_bgcolor="white", yaxis=dict(gridcolor=GRID, tickformat=",.0f"),
                                   margin=dict(t=50, b=20), legend=dict(orientation="h", y=-0.4))
                 add_framework_markers(fig, x_is_cat=True)
-                st.plotly_chart(fig, use_container_width=True)
+                st.plotly_chart(fig)
                 st.caption(f"2025 pipeline total: ${totals.get(2025, 0):,.0f}")
 
     # ---- lifecycle dot plot
     with st.container(border=True):
-        cL, cR = st.columns([1.15, 1])
-        with cL:
-            st.markdown(f'<h3 class="card-title">{icon("refresh")}Project lifecycle & financing status</h3>', unsafe_allow_html=True)
-            stage_order = ["Pre-feasibility/impact assessment", "Project feasibility", "Project structuring",
-                           "Implementation"]
+        st.markdown(f'<h3 class="card-title">{icon("refresh")}Project lifecycle & financing status</h3>', unsafe_allow_html=True)
+        stage_order = ["Pre-feasibility/impact assessment", "Project feasibility", "Project structuring",
+                       "Implementation"]
+        fig = go.Figure()
+        for _, r in proj.iterrows():
+            ypos = stage_order.index(r["stage"]) if r.get("stage") in stage_order else len(stage_order)
+            fs = str(r.get("finance_status") or "")
+            color = STATUS["good"] if fs and "not funded" not in fs.lower() else STATUS["serious"]
+            fig.add_trace(go.Scatter(x=[str(r["Year"])], y=[ypos], mode="markers+text",
+                                     marker=dict(size=14, color=color, symbol="square",
+                                                 line=dict(color="white", width=1)),
+                                     text=[r["label"][:22]], textposition="top center",
+                                     textfont=dict(size=8), name=r["label"],
+                                     hovertemplate=f"{r['label']}<br>{r['finance_status']}<extra></extra>",
+                                     showlegend=False))
+        fig.update_layout(title="Stage of development × year (■ funded/partially, ■ not funded)",
+                          plot_bgcolor="white", yaxis=dict(gridcolor=GRID, dtick=1,
+                                                           tickmode="array", tickvals=list(range(len(stage_order))),
+                                                           ticktext=stage_order),
+                          xaxis=dict(title="Filing year"), margin=dict(t=50, b=20), height=320)
+        add_framework_markers(fig, x_is_cat=True)
+        st.plotly_chart(fig)
+
+    # ---- financing model mix
+    with st.container(border=True):
+        st.markdown(f'<h3 class="card-title">{icon("building-2")}Financing model mix</h3>', unsafe_allow_html=True)
+        fm_rows = []
+        for _, r in proj.iterrows():
+            if r.get("finance_model"):
+                for m in split_multi(r["finance_model"], r["Year"]):
+                    fm_rows.append({"Year": int(r["Year"]), "model": m})
+        if fm_rows:
+            fm = pd.DataFrame(fm_rows)
+            models = fm["model"].unique()
+            pivot = fm.groupby(["Year", "model"]).size().unstack(fill_value=0).reindex(sel_years, fill_value=0)
             fig = go.Figure()
-            for _, r in proj.iterrows():
-                ypos = stage_order.index(r["stage"]) if r.get("stage") in stage_order else len(stage_order)
-                fs = str(r.get("finance_status") or "")
-                color = STATUS["good"] if fs and "not funded" not in fs.lower() else STATUS["serious"]
-                fig.add_trace(go.Scatter(x=[str(r["Year"])], y=[ypos], mode="markers+text",
-                                         marker=dict(size=14, color=color, symbol="square",
-                                                     line=dict(color="white", width=1)),
-                                         text=[r["label"][:22]], textposition="top center",
-                                         textfont=dict(size=8), name=r["label"],
-                                         hovertemplate=f"{r['label']}<br>{r['finance_status']}<extra></extra>",
-                                         showlegend=False))
-            fig.update_layout(title="Stage of development × year (■ funded/partially, ■ not funded)",
-                              plot_bgcolor="white", yaxis=dict(gridcolor=GRID, dtick=1,
-                                                               tickmode="array", tickvals=list(range(len(stage_order))),
-                                                               ticktext=stage_order),
-                              xaxis=dict(title="Filing year"), margin=dict(t=50, b=20), height=280)
+            palette = [CAT["blue"], CAT["green"], CAT["orange"], CAT["magenta"], CAT["aqua"]]
+            for i, m in enumerate(models):
+                if m in pivot.columns:
+                    fig.add_trace(go.Bar(x=[str(y) for y in pivot.index], y=pivot[m], name=m[:35],
+                                         marker_color=palette[i % len(palette)]))
+            fig.update_layout(barmode="stack", title="Financing models mentioned, per filing",
+                              plot_bgcolor="white", yaxis=dict(gridcolor=GRID, dtick=1),
+                              margin=dict(t=50, b=20), legend=dict(orientation="h", y=-0.4))
             add_framework_markers(fig, x_is_cat=True)
-            st.plotly_chart(fig, use_container_width=True)
-        with cR:
-            st.markdown(f'<h3 class="card-title">{icon("building-2")}Financing model mix</h3>', unsafe_allow_html=True)
-            fm_rows = []
-            for _, r in proj.iterrows():
-                if r.get("finance_model"):
-                    for m in split_multi(r["finance_model"], r["Year"]):
-                        fm_rows.append({"Year": int(r["Year"]), "model": m})
-            if fm_rows:
-                fm = pd.DataFrame(fm_rows)
-                models = fm["model"].unique()
-                pivot = fm.groupby(["Year", "model"]).size().unstack(fill_value=0).reindex(sel_years, fill_value=0)
-                fig = go.Figure()
-                palette = [CAT["blue"], CAT["green"], CAT["orange"], CAT["magenta"], CAT["aqua"]]
-                for i, m in enumerate(models):
-                    if m in pivot.columns:
-                        fig.add_trace(go.Bar(x=[str(y) for y in pivot.index], y=pivot[m], name=m[:35],
-                                             marker_color=palette[i % len(palette)]))
-                fig.update_layout(barmode="stack", title="Financing models mentioned, per filing",
-                                  plot_bgcolor="white", yaxis=dict(gridcolor=GRID, dtick=1),
-                                  margin=dict(t=50, b=20), legend=dict(orientation="h", y=-0.4))
-                add_framework_markers(fig, x_is_cat=True)
-                st.plotly_chart(fig, use_container_width=True)
-                st.caption("The drift toward naming 'Grants' — and away from own-budget — is the "
-                           "funding-dependence story.")
-            else:
-                st.info("No financing model data in the selected years.")
+            st.plotly_chart(fig)
+            st.caption("The drift toward naming 'Grants' — and away from own-budget — is the "
+                       "funding-dependence story.")
+        else:
+            st.info("No financing model data in the selected years.")
 
     # ---- never-answered finance block + cost card
     c1, c2 = st.columns([1.15, 1])
@@ -1545,7 +1422,7 @@ programme and the <b>$10M solar PV</b> siting project.
                         rows.append({"Field theme": kw.title(), "Asked in": f"{min(asked)}–{max(asked)}",
                                      "Status": "Never answered"})
             if rows:
-                st.dataframe(pd.DataFrame(rows), use_container_width=True, hide_index=True)
+                st.dataframe(pd.DataFrame(rows), width="stretch", hide_index=True)
                 st.caption("Credit rating, access-to-finance mechanisms, and decarbonising investments "
                            "were asked across multiple filings and never answered. Absence is the "
                            "finding — it is rendered, not hidden.")
@@ -1580,7 +1457,7 @@ with tabs[6]:
         show = show[show["qt_norm"].str.contains(q.lower(), na=False) |
                     show["sf_norm"].str.contains(q.lower(), na=False)]
     disp = show[["Year", "Question", "Sub-fields", "St. Petersburg Response"]].reset_index(drop=True)
-    st.dataframe(disp, use_container_width=True, hide_index=True, height=520)
+    st.dataframe(disp, width="stretch", hide_index=True, height=520)
     st.caption(f"{len(disp)} rows shown.")
 
 st.markdown("---")
