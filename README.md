@@ -1,4 +1,4 @@
-# CDP Mumbai Analysis
+# CDP Analysis
 
 Extracts **Mumbai's responses** from the CDP (Carbon Disclosure Project) **Cities** dataset and writes them to a clean, readable Excel workbook.
 
@@ -15,12 +15,12 @@ Mumbai is a *city*, so its data lives in the **CDP Cities** dataset (not the Sta
 
 Edit the Config cell in the notebook:
 
-| Setting | Value | Meaning |
-|---|---|---|
-| `INPUT_FILE` | `cdp_cities_data/2025_Full_Cities_Public_Data_Separated_by_Question.xlsx` | CDP Cities input file |
-| `MUMBAI_DISC_NO` | `31178` | Mumbai's `cdp_disclosing_org_number` |
-| `OUTPUT_FILE` | `Mumbai_Responses.xlsx` | Output workbook |
-| `SKIP_SHEETS` | `{"Introduction", "Summary"}` | Non-question sheets to ignore |
+| Setting            | Value                                                                       | Meaning                               |
+| ------------------ | --------------------------------------------------------------------------- | ------------------------------------- |
+| `INPUT_FILE`     | `cdp_cities_data/2025_Full_Cities_Public_Data_Separated_by_Question.xlsx` | CDP Cities input file                 |
+| `MUMBAI_DISC_NO` | `31178`                                                                   | Mumbai's`cdp_disclosing_org_number` |
+| `OUTPUT_FILE`    | `Mumbai_Responses.xlsx`                                                   | Output workbook                       |
+| `SKIP_SHEETS`    | `{"Introduction", "Summary"}`                                             | Non-question sheets to ignore         |
 
 ## How to run
 
